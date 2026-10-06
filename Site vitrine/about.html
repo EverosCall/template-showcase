@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À Propos de la Marque — ATELIER KRONA</title>
+  <meta name="description" content="Découvrez l'histoire, la vision, le manifeste et le savoir-faire artisanal d'Atelier Krona. Des objets sculpturaux conçus pour durer.">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2336f4a4'><circle cx='12' cy='12' r='9'/></svg>">
+
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!--
+  ====================================================================
+  💡 GUIDE DÉBUTANT : COMMENT MODIFIER CETTE PAGE À PROPOS (/about)
+  ====================================================================
+  Pour modifier rapidement les textes ou photos de cette page :
+  Faites CTRL + F et recherchez :
+  - <!-- TITRE : pour changer les titres et en-têtes
+  - <!-- TEXTE : pour changer l'histoire, le manifeste et les valeurs
+  - <!-- IMAGE : pour remplacer les photos de l'atelier et de l'équipe
+  - <!-- BOUTON : pour modifier les textes et liens des boutons
+  ====================================================================
+  -->
+
+  <!-- ==================================================================== -->
+  <!-- 1. BANNIÈRE D'ANNONCE -->
+  <!-- ==================================================================== -->
+  <aside class="announcement-bar" role="region" aria-label="Annonce">
+    <span class="badge badge-mint">MANIFESTE</span>
+    <!-- TEXTE : message d'annonce -->
+    <span>Une vision radicale de la durabilité : des pièces réparables à vie sans obsolescence.</span>
+    <button class="announcement-close" aria-label="Fermer l'annonce">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </aside>
+
+  <!-- ==================================================================== -->
+  <!-- 2. EN-TÊTE / NAVIGATION (URLS PROPRES) -->
+  <!-- ==================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-container" aria-label="Navigation principale">
+        
+        <!-- LOGO DU SITE -->
+        <a href="./" class="site-logo">
+          <span class="site-logo__title">KRONA</span>
+          <span class="site-logo__sub">STUDIO & ATELIER</span>
+        </a>
+
+        <!-- MENU PRINCIPAL -->
+        <ul class="nav-menu">
+          <li><a href="./" class="nav-link">Accueil</a></li>
+          <li><a href="produits" class="nav-link">Catalogue</a></li>
+          <li><a href="about" class="nav-link active">À Propos</a></li>
+          <li><a href="services" class="nav-link">Services</a></li>
+          <li><a href="tarifs" class="nav-link">Tarifs & Packs</a></li>
+          <li><a href="faq" class="nav-link">FAQ</a></li>
+          <li><a href="contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- ACTIONS & SÉLECTEUR DE TRADUCTION -->
+        <div class="nav-actions">
+          <div class="lang-switcher-wrap">
+            <button type="button" class="lang-pill-btn" id="lang-toggle-btn" title="Traduire en Anglais / Switch to English" aria-label="Changer de langue">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span class="lang-text">FR / EN</span>
+            </button>
+            <div id="google_translate_element"></div>
+          </div>
+          <!-- BOUTON D'ACTION DU HEADER -->
+          <a href="produits" class="btn btn-primary btn-sm">
+            <span>Découvrir la Collection</span>
+          </a>
+          <button class="mobile-toggle" aria-label="Ouvrir le menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================================================================== -->
+  <!-- MENU MOBILE LATÉRAL -->
+  <!-- ==================================================================== -->
+  <div class="mobile-nav" role="dialog" aria-modal="true" aria-label="Menu mobile">
+    <div class="mobile-nav-header">
+      <div class="site-logo">
+        <span class="site-logo__title">KRONA</span>
+        <span class="site-logo__sub">STUDIO & ATELIER</span>
+      </div>
+      <button class="mobile-nav-close announcement-close" aria-label="Fermer le menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <ul class="mobile-nav-menu">
+      <li><a href="./" class="mobile-nav-link">Accueil</a></li>
+      <li><a href="produits" class="mobile-nav-link">Catalogue de produits</a></li>
+      <li><a href="about" class="mobile-nav-link active">L'histoire & L'atelier</a></li>
+      <li><a href="services" class="mobile-nav-link">Services & Sur-mesure</a></li>
+      <li><a href="tarifs" class="mobile-nav-link">Tarifs & Packs</a></li>
+      <li><a href="faq" class="mobile-nav-link">Questions fréquentes</a></li>
+      <li><a href="contact" class="mobile-nav-link">Contact & Revendeurs</a></li>
+    </ul>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px;">
+      <button type="button" class="lang-pill-btn" id="mobile-lang-toggle-btn" style="justify-content: center; padding: 10px 16px; font-size: 13px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span class="lang-text">Switch to English (EN)</span>
+      </button>
+      <a href="produits" class="btn btn-primary btn-full">Découvrir la collection</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================================================================== -->
+    <!-- 3. SECTION HERO : MANIFESTE ET HISTOIRE -->
+    <!-- ==================================================================== -->
+    <section class="section" style="padding-top: 56px;">
+      <div class="container">
+        <div style="max-width: 820px; margin: 0 auto; text-align: center;">
+          <span class="eyebrow eyebrow--mint eyebrow--dot">L'Origine & L'Ambition</span>
+          <!-- TITRE PRINCIPAL -->
+          <h1 style="margin-bottom: 24px;">
+            L'éloge de la retenue, la noblesse du geste.
+          </h1>
+          <!-- TEXTE D'INTRODUCTION -->
+          <p class="lead" style="margin-bottom: 32px;">
+            Fondé entre Paris et Copenhague, l'Atelier Krona est né d'un constat simple : nous sommes submergés d'objets jetables aux promesses éphémères. Nous avons choisi le chemin inverse.
+          </p>
+        </div>
+
+        <!-- IMAGE PRINCIPALE DE L'ATELIER : remplacez l'URL ci-dessous -->
+        <div style="border-radius: var(--radius-largepanels); overflow: hidden; border: 1px solid var(--color-spruce-border); margin-top: 32px; box-shadow: var(--shadow-elevated);">
+          <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1600&q=80" alt="L'atelier de conception Krona" style="width: 100%; height: 500px; object-fit: cover;">
+        </div>
+
+        <!-- BANDEAU DE STATISTIQUES CLÉS -->
+        <div class="stats-banner">
+          <div class="stat-item">
+            <div class="stat-number">2021</div>
+            <div class="stat-label">Année de création du studio</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100<span class="mint">%</span></div>
+            <div class="stat-label">Conception & usinage européen</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">15<span class="mint">ans</span></div>
+            <div class="stat-label">Disponibilité garantie des pièces détachées</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">45<span class="mint">+</span></div>
+            <div class="stat-label">Distributeurs & concept stores agréés</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- 4. SECTION NOTRE HISTOIRE -->
+    <!-- ==================================================================== -->
+    <section class="section" style="background-color: var(--surface-card); border-top: 1px solid var(--color-spruce-border); border-bottom: 1px solid var(--color-spruce-border);">
+      <div class="container">
+        <div class="split">
+          <div>
+            <span class="eyebrow eyebrow--mint">Notre Histoire</span>
+            <!-- TITRE HISTOIRE -->
+            <h2>Réinventer le rapport aux objets du quotidien</h2>
+            <p class="lead" style="color: var(--color-pure-white);">
+              Nous concevons des pièces qui ne cherchent pas à dominer l'espace mais à l'apaiser.
+            </p>
+            <p>
+              Chaque prototype fait l'objet de dizaines d'itérations : nous testons le poids d'un plateau lorsqu'on le dépose, l'angle exact d'une assise après quatre heures de lecture, ou encore la température de couleur d'une LED pour qu'elle n'agresse jamais le regard.
+            </p>
+            <p>
+              Nos créations sont aujourd'hui présentes dans des résidences privées, des suites d'hôtels et des studios de création à travers toute l'Europe.
+            </p>
+          </div>
+
+          <!-- IMAGE ÉTUDE : remplacez l'URL ci-dessous -->
+          <div style="border-radius: var(--radius-cards); overflow: hidden; border: 1px solid var(--color-spruce-border);">
+            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1000&q=80" alt="Étude d'éclairage" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- 5. SECTION ENGAGEMENTS & PILIERS (3 CARTES) -->
+    <!-- ==================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow eyebrow--mint">Les Piliers de la Marque</span>
+          <!-- TITRE ENGAGEMENTS -->
+          <h2>Nos trois engagements inaltérables</h2>
+          <p>La boussole qui guide chacune de nos séries limitées et chaque choix de matériau.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- ENGAGEMENT 1 -->
+          <div class="card">
+            <div style="font-size: 28px; color: var(--color-shopify-mint); font-weight: var(--fw-light); margin-bottom: 16px;">01</div>
+            <h3 style="font-size: 20px; margin-bottom: 12px;">Sincérité des Matériaux</h3>
+            <p style="font-size: 14px; color: var(--color-sage-gray);">
+              Pas de placages artificiels, pas de plastique jetable. Quand une pièce semble être en aluminium massif ou en noyer brut, c'est parce qu'elle l'est réellement.
+            </p>
+          </div>
+
+          <!-- ENGAGEMENT 2 -->
+          <div class="card">
+            <div style="font-size: 28px; color: var(--color-shopify-mint); font-weight: var(--fw-light); margin-bottom: 16px;">02</div>
+            <h3 style="font-size: 20px; margin-bottom: 12px;">Démontabilité & Réparation</h3>
+            <p style="font-size: 14px; color: var(--color-sage-gray);">
+              Toutes nos pièces sont assemblées par visserie mécanique de précision plutôt que par collage irrémédiable. Chaque composant est remplaçable à vie.
+            </p>
+          </div>
+
+          <!-- ENGAGEMENT 3 -->
+          <div class="card">
+            <div style="font-size: 28px; color: var(--color-shopify-mint); font-weight: var(--fw-light); margin-bottom: 16px;">03</div>
+            <h3 style="font-size: 20px; margin-bottom: 12px;">Réseau Éthique</h3>
+            <p style="font-size: 14px; color: var(--color-sage-gray);">
+              Nous travaillons exclusivement avec des ateliers et fonderies à taille humaine en France, Suède et Italie qui respectent des conditions de travail exemplaires.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- 6. SECTION ÉQUIPE & CRÉATEURS -->
+    <!-- ==================================================================== -->
+    <section class="section" style="background-color: #031113; border-top: 1px solid var(--color-spruce-border);">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow">Les Artisans & Designers</span>
+          <!-- TITRE ÉQUIPE -->
+          <h2>L'équipe derrière chaque création</h2>
+          <p>Des architectes, ingénieurs mécaniques et maîtres artisans animés par l'exigence du détail.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- MEMBRE 1 -->
+          <div class="card" style="text-align: center; padding: 32px 24px;">
+            <!-- PHOTO MEMBRE 1 -->
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Éléonore Vance" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px auto; border: 2px solid var(--color-spruce-border);">
+            <h4 style="margin-bottom: 4px;">Éléonore Vance</h4>
+            <div style="font-size: 13px; color: var(--color-shopify-mint); margin-bottom: 12px;">Directrice Artistique & Co-fondatrice</div>
+            <p style="font-size: 14px; color: var(--color-sage-gray); margin-bottom: 0;">Formée à l'École Nationale Supérieure des Arts Décoratifs, elle insuffle l'épure géométrique scandinave.</p>
+          </div>
+
+          <!-- MEMBRE 2 -->
+          <div class="card" style="text-align: center; padding: 32px 24px;">
+            <!-- PHOTO MEMBRE 2 -->
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Thomas Lindqvist" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px auto; border: 2px solid var(--color-spruce-border);">
+            <h4 style="margin-bottom: 4px;">Thomas Lindqvist</h4>
+            <div style="font-size: 13px; color: var(--color-shopify-mint); margin-bottom: 12px;">Ingénieur Produit & Acoustique</div>
+            <p style="font-size: 14px; color: var(--color-sage-gray); margin-bottom: 0;">Ancien acousticien pour l'industrie aéronautique, il garantit la neutralité sonore et l'usinage au micron.</p>
+          </div>
+
+          <!-- MEMBRE 3 -->
+          <div class="card" style="text-align: center; padding: 32px 24px;">
+            <!-- PHOTO MEMBRE 3 -->
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="Sarah Benali" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px auto; border: 2px solid var(--color-spruce-border);">
+            <h4 style="margin-bottom: 4px;">Sarah Benali</h4>
+            <div style="font-size: 13px; color: var(--color-shopify-mint); margin-bottom: 12px;">Responsable Relations Revendeurs & Pro</div>
+            <p style="font-size: 14px; color: var(--color-sage-gray); margin-bottom: 0;">Interlocutrice privilégiée des architectes d'intérieur et des boutiques partenaires en Europe.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- 7. SECTION APPEL À L'ACTION -->
+    <!-- ==================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="card-showcase" style="text-align: center; padding: 60px 24px;">
+          <!-- TITRE CTA -->
+          <h2 style="margin-bottom: 16px;">Prêt à découvrir nos pièces de visu ?</h2>
+          <p style="max-width: 500px; margin: 0 auto 28px auto;">
+            Consultez le catalogue interactif ou contactez-nous pour connaître le point de vente le plus proche.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+            <!-- BOUTON 1 -->
+            <a href="produits" class="btn btn-primary btn-lg">Accéder au Catalogue</a>
+            <!-- BOUTON 2 -->
+            <a href="contact" class="btn btn-ghost btn-lg">Nous Écrire</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================================================================== -->
+  <!-- 8. PIED DE PAGE (FOOTER GLOBAL) -->
+  <!-- ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="./" class="site-logo">
+            <span class="site-logo__title">KRONA</span>
+            <span class="site-logo__sub">STUDIO & ATELIER</span>
+          </a>
+          <p>Éditeur d'objets d'exception, luminaires et mobilier durable. Créations disponibles auprès de nos distributeurs agréés.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-list">
+            <li><a href="./" class="footer-link">Accueil</a></li>
+            <li><a href="produits" class="footer-link">Catalogue</a></li>
+            <li><a href="about" class="footer-link">À Propos</a></li>
+            <li><a href="services" class="footer-link">Services</a></li>
+            <li><a href="tarifs" class="footer-link">Tarifs & Packs</a></li>
+            <li><a href="faq" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Canaux d'achat</h4>
+          <ul class="footer-list">
+            <li><a href="https://shopify.com" target="_blank" rel="noopener noreferrer" class="footer-link">Shopify Store ↗</a></li>
+            <li><a href="https://amazon.fr" target="_blank" rel="noopener noreferrer" class="footer-link">Amazon Prime ↗</a></li>
+            <li><a href="https://etsy.com" target="_blank" rel="noopener noreferrer" class="footer-link">Etsy Shop ↗</a></li>
+            <li><a href="contact" class="footer-link">Revendeurs physiques</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Rejoindre la Communauté</h4>
+          <p style="font-size: 13px; color: var(--color-mist-gray); margin-bottom: 12px;">Découvrez nos coulisses de fabrication sur Instagram.</p>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm btn-full">Suivre @atelier.krona</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Atelier Krona — Tous droits réservés.</div>
+        <div class="footer-legal-links">
+          <a href="faq">Mentions légales</a>
+          <a href="faq">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts Modulaires -->
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+

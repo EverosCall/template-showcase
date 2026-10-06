@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarifs & Formules — ATELIER KRONA</title>
+  <meta name="description" content="Consultez la grille des tarifs indicatifs et les packs harmonisés de l'Atelier Krona pour l'aménagement de bureau, salon et projets professionnels.">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2336f4a4'><circle cx='12' cy='12' r='9'/></svg>">
+
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!--
+  ====================================================================
+  💡 GUIDE DÉBUTANT : COMMENT MODIFIER CETTE PAGE TARIFS & PACKS
+  ====================================================================
+  Pour modifier rapidement les packs, prix ou textes de cette page :
+  Faites CTRL + F et recherchez :
+  - <!-- TITRE : pour changer les titres et noms des packs
+  - <!-- PRIX : pour modifier les tarifs affichés
+  - <!-- TEXTE : pour changer les avantages et descriptions
+  - <!-- BOUTON : pour modifier les liens d'achat (Shopify, etc.)
+  ====================================================================
+  -->
+
+  <!-- ==================================================================== -->
+  <!-- 1. BANNIÈRE D'ANNONCE -->
+  <!-- ==================================================================== -->
+  <aside class="announcement-bar" role="region" aria-label="Annonce">
+    <span class="badge badge-mint">OFFRE PACKS</span>
+    <span>Bénéficiez de remises exclusives en commandant nos ensembles harmonisés.</span>
+    <button class="announcement-close" aria-label="Fermer l'annonce">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </aside>
+
+  <!-- ==================================================================== -->
+  <!-- 2. EN-TÊTE / NAVIGATION (URLS PROPRES) -->
+  <!-- ==================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-container" aria-label="Navigation principale">
+        
+        <!-- LOGO DU SITE -->
+        <a href="./" class="site-logo">
+          <span class="site-logo__title">KRONA</span>
+          <span class="site-logo__sub">STUDIO & ATELIER</span>
+        </a>
+
+        <!-- MENU PRINCIPAL -->
+        <ul class="nav-menu">
+          <li><a href="./" class="nav-link">Accueil</a></li>
+          <li><a href="produits" class="nav-link">Catalogue</a></li>
+          <li><a href="about" class="nav-link">À Propos</a></li>
+          <li><a href="services" class="nav-link">Services</a></li>
+          <li><a href="tarifs" class="nav-link active">Tarifs & Packs</a></li>
+          <li><a href="faq" class="nav-link">FAQ</a></li>
+          <li><a href="contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- ACTIONS & SÉLECTEUR DE TRADUCTION -->
+        <div class="nav-actions">
+          <div class="lang-switcher-wrap">
+            <button type="button" class="lang-pill-btn" id="lang-toggle-btn" title="Traduire en Anglais / Switch to English" aria-label="Changer de langue">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span class="lang-text">FR / EN</span>
+            </button>
+            <div id="google_translate_element"></div>
+          </div>
+          <!-- BOUTON DU HEADER -->
+          <a href="produits" class="btn btn-primary btn-sm">
+            <span>Catalogue Pièces</span>
+          </a>
+          <button class="mobile-toggle" aria-label="Ouvrir le menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================================================================== -->
+  <!-- MENU MOBILE LATÉRAL -->
+  <!-- ==================================================================== -->
+  <div class="mobile-nav" role="dialog" aria-modal="true" aria-label="Menu mobile">
+    <div class="mobile-nav-header">
+      <div class="site-logo">
+        <span class="site-logo__title">KRONA</span>
+        <span class="site-logo__sub">STUDIO & ATELIER</span>
+      </div>
+      <button class="mobile-nav-close announcement-close" aria-label="Fermer le menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <ul class="mobile-nav-menu">
+      <li><a href="./" class="mobile-nav-link">Accueil</a></li>
+      <li><a href="produits" class="mobile-nav-link">Catalogue de produits</a></li>
+      <li><a href="about" class="mobile-nav-link">L'histoire & L'atelier</a></li>
+      <li><a href="services" class="mobile-nav-link">Services & Sur-mesure</a></li>
+      <li><a href="tarifs" class="mobile-nav-link active">Tarifs & Packs</a></li>
+      <li><a href="faq" class="mobile-nav-link">Questions fréquentes</a></li>
+      <li><a href="contact" class="mobile-nav-link">Contact & Revendeurs</a></li>
+    </ul>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px;">
+      <button type="button" class="lang-pill-btn" id="mobile-lang-toggle-btn" style="justify-content: center; padding: 10px 16px; font-size: 13px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span class="lang-text">Switch to English (EN)</span>
+      </button>
+      <a href="produits" class="btn btn-primary btn-full">Voir les pièces</a>
+    </div>
+  </div>
+
+  <main class="section" style="padding-top: 56px;">
+    <div class="container">
+      
+      <!-- ==================================================================== -->
+      <!-- 3. EN-TÊTE DE LA PAGE TARIFS -->
+      <!-- ==================================================================== -->
+      <div class="section-header text-center">
+        <span class="eyebrow eyebrow--mint">Transparence & Packs Harmonisés</span>
+        <!-- TITRE PRINCIPAL -->
+        <h1>Formules & Tarifs Indicatifs</h1>
+        <!-- TEXTE D'INTRODUCTION -->
+        <p class="lead">
+          Des ensembles pensés pour dialoguer naturellement dans votre espace de vie ou de travail, avec un avantage tarifaire exclusif.
+        </p>
+      </div>
+
+      <!-- ==================================================================== -->
+      <!-- 4. GRILLE DES 3 FORMULES & PACKS -->
+      <!-- ==================================================================== -->
+      <div class="grid grid-3" style="align-items: stretch; margin-bottom: 72px;">
+        
+        <!-- PACK 1 : Découverte Bureau -->
+        <div class="pricing-card">
+          <span class="badge badge-outline" style="align-self: flex-start; margin-bottom: 16px;">Aménagement Bureau</span>
+          <!-- TITRE PACK 1 -->
+          <h3 style="font-size: 22px;">Pack Découverte Bureau</h3>
+          <!-- TEXTE PACK 1 -->
+          <p style="font-size: 14px; color: var(--color-mist-gray); margin-top: 6px;">
+            Pour un espace de travail inspirant et débarrassé du désordre.
+          </p>
+
+          <div class="pricing-card__price-box">
+            <!-- PRIX PACK 1 -->
+            <span class="pricing-card__price">360 €</span>
+            <span style="font-size: 16px; color: var(--color-slate); text-decoration: line-through;">399 €</span>
+          </div>
+
+          <ul class="pricing-features-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>1x Organiseur de bureau Krona Monolith</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>1x Lampe de table Krona Arch 38cm</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Coffret cadeau avec certificat numéroté</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Livraison express offerte</span>
+            </li>
+          </ul>
+
+          <!-- BOUTON COMMANDE PACK 1 -->
+          <a href="https://shopify.com" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-full">
+            <span>Commander sur Shopify ↗</span>
+          </a>
+        </div>
+
+        <!-- PACK 2 : Salon Confort & Son (Mis en avant) -->
+        <div class="pricing-card is-popular">
+          <span class="badge badge-mint" style="align-self: flex-start; margin-bottom: 16px;">Pack Signature Recommandé</span>
+          <!-- TITRE PACK 2 -->
+          <h3 style="font-size: 22px;">Pack Salon Confort & Son</h3>
+          <!-- TEXTE PACK 2 -->
+          <p style="font-size: 14px; color: var(--color-mist-gray); margin-top: 6px;">
+            L'accord idéal entre ergonomie moderne et pureté acoustique.
+          </p>
+
+          <div class="pricing-card__price-box">
+            <!-- PRIX PACK 2 -->
+            <span class="pricing-card__price">1 290 €</span>
+            <span style="font-size: 16px; color: var(--color-slate); text-decoration: line-through;">1 380 €</span>
+          </div>
+
+          <ul class="pricing-features-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>1x Fauteuil Lounge 03 (teinte de cuir au choix)</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>1x Enceinte audiophile Krona Sound I</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Échantillons de cuir offerts en amont</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Livraison blanche avec montage dans la pièce</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Garantie étendue 10 ans sur la structure</span>
+            </li>
+          </ul>
+
+          <!-- BOUTON COMMANDE PACK 2 -->
+          <a href="https://shopify.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">
+            <span>Commander le Pack Signature ↗</span>
+          </a>
+        </div>
+
+        <!-- PACK 3 : Formule Architectes & Pro -->
+        <div class="pricing-card">
+          <span class="badge badge-white" style="align-self: flex-start; margin-bottom: 16px;">B2B & Hôtellerie</span>
+          <!-- TITRE PACK 3 -->
+          <h3 style="font-size: 22px;">Formule Pro & Architectes</h3>
+          <!-- TEXTE PACK 3 -->
+          <p style="font-size: 14px; color: var(--color-mist-gray); margin-top: 6px;">
+            Aménagement global pour bureaux, réceptions et hôtellerie de charme.
+          </p>
+
+          <div class="pricing-card__price-box">
+            <!-- PRIX PACK 3 -->
+            <span class="pricing-card__price" style="font-size: 34px;">Sur devis</span>
+          </div>
+
+          <ul class="pricing-features-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Tarification préférentielle dégressive dès 3 pièces</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Personnalisation des finitions, teintes et câbles</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Accès direct aux modèles 3D BIM et fichiers STEP</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Calendrier d'expédition calqué sur votre chantier</span>
+            </li>
+          </ul>
+
+          <!-- BOUTON COMMANDE PACK 3 -->
+          <a href="contact?sujet=devis-pro" class="btn btn-ghost btn-full">
+            <span>Demander une étude pro →</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- NOTE DE TRANSPARENCE SUR LES PRIX -->
+      <div class="card" style="padding: 32px; background-color: var(--surface-card);">
+        <h3 style="font-size: 18px; margin-bottom: 12px; color: var(--color-pure-white);">Notre engagement sur la transparence des prix</h3>
+        <p style="font-size: 14px; line-height: 1.6; margin-bottom: 0;">
+          Chaque prix public reflète fidèlement le coût des matériaux nobles (aluminium anodisé massif, bois certifiés européens, cuirs de tannerie italienne) et le temps d'usinage manuel de nos artisans partenaires. En achetant auprès de nos revendeurs agréés ou sur notre showroom vitrine, vous bénéficiez du même tarif officiel sans marge intermédiaire superflue.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==================================================================== -->
+  <!-- 5. PIED DE PAGE (FOOTER GLOBAL) -->
+  <!-- ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="./" class="site-logo">
+            <span class="site-logo__title">KRONA</span>
+            <span class="site-logo__sub">STUDIO & ATELIER</span>
+          </a>
+          <p>Éditeur d'objets d'exception, luminaires et mobilier durable. Créations disponibles auprès de nos distributeurs agréés.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-list">
+            <li><a href="./" class="footer-link">Accueil</a></li>
+            <li><a href="produits" class="footer-link">Catalogue</a></li>
+            <li><a href="about" class="footer-link">À Propos</a></li>
+            <li><a href="services" class="footer-link">Services</a></li>
+            <li><a href="tarifs" class="footer-link">Tarifs & Packs</a></li>
+            <li><a href="faq" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Canaux d'achat</h4>
+          <ul class="footer-list">
+            <li><a href="https://shopify.com" target="_blank" rel="noopener noreferrer" class="footer-link">Shopify Store ↗</a></li>
+            <li><a href="https://amazon.fr" target="_blank" rel="noopener noreferrer" class="footer-link">Amazon Store ↗</a></li>
+            <li><a href="https://etsy.com" target="_blank" rel="noopener noreferrer" class="footer-link">Etsy Atelier ↗</a></li>
+            <li><a href="contact" class="footer-link">Points de vente physiques</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Besoin d'un devis ?</h4>
+          <p style="font-size: 13px; color: var(--color-mist-gray); margin-bottom: 12px;">Contactez nos conseillers pour toute commande groupée.</p>
+          <a href="contact?sujet=devis" class="btn btn-ghost btn-sm btn-full">Demander un chiffrage</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Atelier Krona — Tarifs indicatifs.</div>
+        <div class="footer-legal-links">
+          <a href="faq">Mentions légales</a>
+          <a href="faq">Conditions générales</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts Modulaires -->
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

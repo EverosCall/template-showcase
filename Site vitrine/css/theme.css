@@ -1,0 +1,306 @@
+/* ==========================================================================
+   ATELIER KRONA — SHOPIFY MIDNIGHT GREENHOUSE DESIGN SYSTEM
+   Theme: Dark, Midnight Forest & Electric Mint Spark
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;550;600;700&display=swap');
+
+:root {
+  /* --- PALETTE DE COULEURS --- */
+  --color-midnight-forest: #02090a; /* Toile de fond principale */
+  --color-deep-lichen: #061a1c;     /* Surface des cartes et panneaux */
+  --color-shaded-fern: #072720;     /* Panneau surélevé & barre de navigation */
+  --color-spruce-border: #1e2c31;   /* Bordures fines hairline */
+  --color-abyss-indigo: #000a1e;    /* Surface secondaire profonde */
+  --color-pure-white: #ffffff;      /* Titres, textes primaires, bouton blanc */
+  --color-mist-gray: #a1a1aa;       /* Métadonnées, textes secondaires */
+  --color-sage-gray: #99b3ad;       /* Paragraphes, corps de texte chaleureux */
+  --color-faded-steel: #9dabad;     /* Liens tertiaires, fil d'Ariane */
+  --color-soft-pearl: #9797a2;      /* Micro-copies, tags neutres */
+  --color-carbon-black: #000000;    /* Fond contraste max, icônes */
+  --color-slate: #71717a;           /* Éléments atténués, labels discrets */
+  --color-graphite: #333333;        /* États inactifs, contours disabled */
+  --color-shopify-mint: #36f4a4;    /* L'étincelle menthe : indicateurs actifs, hover, focus */
+  --color-mossy-edge: #133b32;      /* Bordure intérieure subtile avec reflet vert */
+
+  /* --- SURFACES SÉMANTIQUES --- */
+  --surface-canvas: var(--color-midnight-forest);
+  --surface-card: var(--color-deep-lichen);
+  --surface-elevated: var(--color-shaded-fern);
+  --surface-inset: var(--color-abyss-indigo);
+  --surface-border: var(--color-spruce-border);
+
+  /* --- TYPOGRAPHIE --- */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-feature-settings: "ss03", "cv02", "cv03", "cv04", "cv11";
+
+  /* Échelle typographique */
+  --text-caption: 12px;
+  --leading-caption: 1.2;
+  --tracking-caption: 0.06em;
+
+  --text-body-sm: 14px;
+  --leading-body-sm: 1.45;
+  --tracking-body-sm: 0.015em;
+
+  --text-body: 16px;
+  --leading-body: 1.5;
+  --tracking-body: 0.02em;
+
+  --text-subheading: 20px;
+  --leading-subheading: 1.4;
+  --tracking-subheading: 0.02em;
+
+  --text-heading-sm: 24px;
+  --leading-heading-sm: 1.25;
+  --tracking-heading-sm: 0.02em;
+
+  --text-heading: 28px;
+  --leading-heading: 1.18;
+  --tracking-heading: 0.025em;
+
+  --text-heading-lg: 42px;
+  --leading-heading-lg: 1.12;
+  --tracking-heading-lg: 0.03em;
+
+  --text-display: clamp(48px, 6vw, 76px);
+  --leading-display: 0.98;
+  --tracking-display: 0.035em;
+
+  /* Graisses */
+  --fw-light: 330;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 550;
+  --fw-bold: 650;
+
+  /* --- ESPACEMENTS --- */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-28: 28px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-56: 56px;
+  --spacing-64: 64px;
+  --spacing-80: 80px;
+  --spacing-128: 128px;
+
+  /* --- RAYONS DE BORDURE (RADII) --- */
+  --radius-inputs: 4px;
+  --radius-cards: 12px;
+  --radius-nav: 12px;
+  --radius-largepanels: 20px;
+  --radius-pills: 9999px;
+
+  /* --- OMBRES ET PROFONDEUR --- */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  --shadow-elevated: 0 20px 60px rgba(5, 24, 19, 0.2), inset 0 1px 0 var(--color-mossy-edge);
+  --shadow-button: inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  --glow-mint: 0 0 24px rgba(54, 244, 164, 0.2);
+
+  /* --- MISE EN PAGE --- */
+  --page-max-width: 1280px;
+  --section-gap: 88px;
+  --transition-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.15s ease-out;
+}
+
+/* --- RESET ÉLÉMENTAIRE --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-family);
+  font-feature-settings: var(--font-feature-settings);
+  background-color: var(--surface-canvas);
+  color: var(--color-sage-gray);
+  line-height: var(--leading-body);
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: var(--color-midnight-forest);
+  color: var(--color-sage-gray);
+}
+
+/* --- SÉLECTIONS ET FOCUS --- */
+::selection {
+  background-color: var(--color-shopify-mint);
+  color: var(--color-midnight-forest);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-shopify-mint);
+  outline-offset: 3px;
+}
+
+/* --- TYPOGRAPHIE BASE --- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-pure-white);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-heading);
+}
+
+h1 {
+  font-size: var(--text-display);
+  line-height: var(--leading-display);
+  font-weight: var(--fw-light);
+  letter-spacing: var(--tracking-display);
+}
+
+h2 {
+  font-size: var(--text-heading-lg);
+  line-height: var(--leading-heading-lg);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--tracking-heading-lg);
+}
+
+h3 {
+  font-size: var(--text-heading);
+  line-height: var(--leading-heading);
+  font-weight: var(--fw-medium);
+}
+
+h4 {
+  font-size: var(--text-heading-sm);
+  line-height: var(--leading-heading-sm);
+  font-weight: var(--fw-semibold);
+}
+
+p {
+  color: var(--color-sage-gray);
+  line-height: var(--leading-body);
+  margin-bottom: var(--spacing-16);
+}
+
+p.lead {
+  font-size: var(--text-subheading);
+  line-height: var(--leading-subheading);
+  color: var(--color-sage-gray);
+  font-weight: var(--fw-regular);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* --- EYEBROW LABELS (Pre-titres et tags) --- */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  font-size: var(--text-caption);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-caption);
+  text-transform: uppercase;
+  color: var(--color-mist-gray);
+  margin-bottom: var(--spacing-12);
+}
+
+.eyebrow--mint {
+  color: var(--color-shopify-mint);
+}
+
+.eyebrow--dot::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-shopify-mint);
+}
+
+/* --- LIEN AVEC ÉTINCELLE MINT (Minting Link) --- */
+.link-mint {
+  color: var(--color-shopify-mint);
+  font-weight: var(--fw-medium);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-6);
+  position: relative;
+  transition: var(--transition-fast);
+}
+
+.link-mint::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 1px;
+  background-color: var(--color-shopify-mint);
+  transition: width 0.25s ease-out;
+}
+
+.link-mint:hover::after {
+  width: 100%;
+}
+
+.link-mint svg {
+  transition: transform 0.2s ease-out;
+}
+
+.link-mint:hover svg {
+  transform: translateX(3px);
+}
+
+/* --- CONTENEUR GLOBAL --- */
+.container {
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-24);
+  padding-right: var(--spacing-24);
+}
+
+/* --- ESPACES DE SECTION --- */
+.section {
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+  position: relative;
+}
+
+.section-header {
+  margin-bottom: var(--spacing-48);
+}
+
+.section-header.text-center {
+  text-align: center;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header h2 {
+  margin-bottom: var(--spacing-16);
+}

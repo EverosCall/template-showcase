@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATELIER KRONA — Design intemporel & Pièces d'exception</title>
+  <meta name="description" content="Site vitrine de la marque Atelier Krona : mobilier, luminaires, audio et accessoires de bureau haut de gamme. Découvrez nos créations et commandez chez nos distributeurs officiels.">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2336f4a4'><circle cx='12' cy='12' r='9'/></svg>">
+
+  <!-- Feuilles de style (Shopify Midnight Greenhouse System) -->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!--
+  ====================================================================
+  💡 GUIDE DÉBUTANT : COMMENT MODIFIER CETTE PAGE FACILEMENT
+  ====================================================================
+  Pour retrouver et modifier un élément rapidement, faites CTRL + F
+  dans votre éditeur et recherchez l'un de ces mots-clés :
+  - <!-- TITRE : pour changer les titres et sous-titres
+  - <!-- TEXTE : pour changer les paragraphes et descriptions
+  - <!-- BOUTON : pour changer les textes et liens des boutons
+  - <!-- IMAGE : pour remplacer l'URL d'une image ou photo
+  - <!-- LIEN : pour modifier les adresses vers d'autres pages
+  - <!-- CONTACT : pour modifier vos coordonnées
+  ====================================================================
+  -->
+
+  <!-- ==================================================================== -->
+  <!-- 1. BANNIÈRE D'ANNONCE (En-tête supérieur) -->
+  <!-- ==================================================================== -->
+  <aside class="announcement-bar" role="region" aria-label="Annonce">
+    <span class="badge badge-mint">NOUVEAUTÉ</span>
+    <!-- TEXTE : message de la bannière supérieure -->
+    <span>Nouvelle collection en édition limitée disponible auprès de nos revendeurs certifiés.</span>
+    <!-- LIEN / BOUTON : lien vers le catalogue -->
+    <a href="produits">Explorer le catalogue →</a>
+    <button class="announcement-close" aria-label="Fermer l'annonce">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </aside>
+
+  <!-- ==================================================================== -->
+  <!-- 2. EN-TÊTE / NAVIGATION PRINCIPALE (STICKY) -->
+  <!-- ==================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-container" aria-label="Navigation principale">
+        
+        <!-- LOGO DU SITE : modifiez le nom de votre marque ci-dessous -->
+        <a href="./" class="site-logo" aria-label="Retour à l'accueil Atelier Krona">
+          <span class="site-logo__title">KRONA</span>
+          <span class="site-logo__sub">STUDIO & ATELIER</span>
+        </a>
+
+        <!-- MENU PRINCIPAL (DESKTOP) : liens de navigation propres sans .html -->
+        <ul class="nav-menu">
+          <li><a href="./" class="nav-link active">Accueil</a></li>
+          <li><a href="produits" class="nav-link">Catalogue</a></li>
+          <li><a href="about" class="nav-link">À Propos</a></li>
+          <li><a href="services" class="nav-link">Services</a></li>
+          <li><a href="tarifs" class="nav-link">Tarifs & Packs</a></li>
+          <li><a href="faq" class="nav-link">FAQ</a></li>
+          <li><a href="contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- ACTIONS & BOUTONS D'EN-TÊTE -->
+        <div class="nav-actions">
+          
+          <!-- BOUTON DE TRADUCTION GOOGLE TRANSLATE FR / EN -->
+          <div class="lang-switcher-wrap">
+            <button type="button" class="lang-pill-btn" id="lang-toggle-btn" title="Traduire en Anglais / Switch to English" aria-label="Changer de langue">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span class="lang-text">FR / EN</span>
+            </button>
+            <div id="google_translate_element"></div>
+          </div>
+
+          <!-- LIEN DE RECHERCHE -->
+          <a href="produits" class="nav-action-link" title="Recherche dans le catalogue" aria-label="Recherche">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </a>
+
+          <!-- BOUTON D'ACTION DU HEADER : modifiez le texte et le lien ci-dessous -->
+          <a href="produits" class="btn btn-primary btn-sm">
+            <span>Voir les Produits</span>
+          </a>
+
+          <!-- BOUTON OUVERTURE DU MENU MOBILE -->
+          <button class="mobile-toggle" aria-label="Ouvrir le menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================================================================== -->
+  <!-- MENU MOBILE LATÉRAL -->
+  <!-- ==================================================================== -->
+  <div class="mobile-nav" role="dialog" aria-modal="true" aria-label="Menu mobile">
+    <div class="mobile-nav-header">
+      <div class="site-logo">
+        <span class="site-logo__title">KRONA</span>
+        <span class="site-logo__sub">STUDIO & ATELIER</span>
+      </div>
+      <button class="mobile-nav-close announcement-close" aria-label="Fermer le menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- LIENS DU MENU MOBILE -->
+    <ul class="mobile-nav-menu">
+      <li><a href="./" class="mobile-nav-link active">Accueil</a></li>
+      <li><a href="produits" class="mobile-nav-link">Catalogue de produits</a></li>
+      <li><a href="about" class="mobile-nav-link">L'histoire & L'atelier</a></li>
+      <li><a href="services" class="mobile-nav-link">Services & Sur-mesure</a></li>
+      <li><a href="tarifs" class="mobile-nav-link">Tarifs & Packs</a></li>
+      <li><a href="faq" class="mobile-nav-link">Questions fréquentes</a></li>
+      <li><a href="contact" class="mobile-nav-link">Contact & Revendeurs</a></li>
+    </ul>
+
+    <!-- ACTIONS DU MENU MOBILE -->
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px;">
+      <button type="button" class="lang-pill-btn" id="mobile-lang-toggle-btn" style="justify-content: center; padding: 10px 16px; font-size: 13px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span class="lang-text">Switch to English (EN)</span>
+      </button>
+      <a href="produits" class="btn btn-primary btn-full">Découvrir le catalogue</a>
+      <a href="contact" class="btn btn-ghost btn-full">Contacter le studio</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================================================================== -->
+    <!-- 3. SECTION HERO (En-tête principal & vitrine) -->
+    <!-- ==================================================================== -->
+    <section class="hero-section">
+      <div class="hero-glow"></div>
+      <div class="container">
+        
+        <div class="hero-content">
+          <!-- SURTITRE -->
+          <span class="eyebrow eyebrow--mint eyebrow--dot">Showroom & Collection Officielle</span>
+
+          <!-- TITRE PRINCIPAL : modifiez votre titre accrocheur ci-dessous -->
+          <h1 class="hero-title">
+            Matières brutes, lignes pures & <span class="mint">durabilité absolue.</span>
+          </h1>
+
+          <!-- DESCRIPTION / SOUS-TITRE : modifiez votre texte de présentation ci-dessous -->
+          <p class="hero-subtitle">
+            Atelier Krona conçoit du mobilier, des luminaires et des objets acoustiques aux finitions d'exception. Explorez nos pièces phares et commandez via nos canaux de vente officiels.
+          </p>
+
+          <div class="hero-actions">
+            <!-- BOUTON 1 : modifiez le texte et le lien vers votre catalogue -->
+            <a href="produits" class="btn btn-primary btn-lg">
+              <span>Explorer la collection</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <!-- BOUTON 2 : modifiez le texte et le lien vers votre histoire -->
+            <a href="about" class="btn btn-ghost btn-lg">
+              <span>Notre manifeste</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- HERO SHOWCASE CARD (Produit vedette mis en avant dans le Hero) -->
+        <div class="hero-showcase">
+          <div class="showcase-banner">
+            
+            <!-- IMAGE HERO : remplacez l'URL src="https://..." de la photo principale ci-dessous -->
+            <div class="showcase-visual">
+              <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80" alt="Lampe Krona Arch en aluminium anodisé">
+            </div>
+
+            <div class="showcase-info">
+              <span class="badge badge-mint">Pièce Signature 2026</span>
+              <!-- TITRE : nom du produit vedette -->
+              <h3>Lampe Sculpturale Krona Arch</h3>
+              <!-- TEXTE : description du produit vedette -->
+              <p>Usinée au micromètre dans un bloc d'aluminium massif, dotée d'un variateur tactile sensitif et d'un diffuseur opalin sans scintillement.</p>
+              
+              <div class="showcase-meta">
+                <!-- PRIX : modifiez le prix du produit -->
+                <span class="showcase-price">289 €</span>
+                <span class="showcase-old-price">349 €</span>
+                <span class="badge badge-outline">En stock chez nos partenaires</span>
+              </div>
+
+              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <!-- BOUTON : lien vers la fiche produit détaillée -->
+                <a href="produit?id=prod-001" class="btn btn-primary">
+                  <span>Découvrir la fiche complète</span>
+                </a>
+                <!-- LIEN D'ACHAT : modifiez le lien externe vers votre boutique Shopify -->
+                <a href="https://shopify.com" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                  <span>Acheter sur Shopify</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- 4. SECTION RÉASSURANCE & ATOUTS (4 GARANTIES CLÉS) -->
+    <!-- ==================================================================== -->
+    <section class="section" style="padding-top: 20px; padding-bottom: 60px;">
+      <div class="container">
+        <div class="grid grid-4">
+          
+          <!-- ATOUT 1 -->
+          <div class="guarantee-card">
+            <div class="guarantee-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 3h12l4 6-10 12L2 9z"></path>
+                <path d="M2 9h20"></path>
+              </svg>
+            </div>
+            <!-- TITRE ATOUT 1 -->
+            <h4>Matériaux Nobles</h4>
+            <!-- TEXTE ATOUT 1 -->
+            <p>Aluminium anodisé, bois certifiés FSC et cuir pleine fleur au tannage végétal d'origine européenne.</p>
+          </div>
+
+          <!-- ATOUT 2 -->
+          <div class="guarantee-card">
+            <div class="guarantee-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
+            </div>
+            <!-- TITRE ATOUT 2 -->
+            <h4>Garantie 5 à 10 Ans</h4>
+            <!-- TEXTE ATOUT 2 -->
+            <p>Pièces détachées conservées au minimum 15 ans pour une réparabilité complète garantie sans obsolescence.</p>
+          </div>
+
+          <!-- ATOUT 3 -->
+          <div class="guarantee-card">
+            <div class="guarantee-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <!-- TITRE ATOUT 3 -->
+            <h4>Expédition Sécurisée</h4>
+            <!-- TEXTE ATOUT 3 -->
+            <p>Achat sécurisé auprès de nos plateformes certifiées avec livraison express suivie et remise contre signature.</p>
+          </div>
+
+          <!-- ATOUT 4 -->
+          <div class="guarantee-card">
+            <div class="guarantee-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+            </div>
+            <!-- TITRE ATOUT 4 -->
+            <h4>Éditions Numérotées</h4>
+            <!-- TEXTE ATOUT 4 -->
+            <p>Chaque création est gravée d'un numéro de série unique et accompagnée d'un certificat d'authenticité signé.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- 5. EXPLORATION PAR CATÉGORIES -->
+    <!-- ==================================================================== -->
+    <section class="section" style="background-color: #031113; border-top: 1px solid var(--color-spruce-border); border-bottom: 1px solid var(--color-spruce-border);">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow">Les Univers du Studio</span>
+          <!-- TITRE DE SECTION -->
+          <h2>Une géométrie sobre pensée pour chaque espace de vie</h2>
+          <!-- TEXTE DE SECTION -->
+          <p>De l'éclairage feutré à l'acoustique de précision, explorez nos catégories d'objets intemporels.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <!-- CATÉGORIE 1 : Luminaires -->
+          <a href="produits?cat=luminaire" class="card" style="text-align: center; padding: 32px 20px;">
+            <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(54, 244, 164, 0.08); color: var(--color-shopify-mint); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="9" y1="18" x2="15" y2="18"></line>
+                <line x1="10" y1="22" x2="14" y2="22"></line>
+                <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path>
+              </svg>
+            </div>
+            <h4 style="margin-bottom: 6px;">Luminaires & Lampes</h4>
+            <p style="font-size: 13px; color: var(--color-mist-gray); margin-bottom: 12px;">Éclairages d'ambiance et suspensions</p>
+            <span class="link-mint" style="font-size: 13px;">Voir la sélection →</span>
+          </a>
+
+          <!-- CATÉGORIE 2 : Mobilier -->
+          <a href="produits?cat=mobilier" class="card" style="text-align: center; padding: 32px 20px;">
+            <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(54, 244, 164, 0.08); color: var(--color-shopify-mint); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"></path>
+                <path d="M3 11v5a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H7v-2a2 2 0 0 0-4 0z"></path>
+                <line x1="5" y1="18" x2="5" y2="21"></line>
+                <line x1="19" y1="18" x2="19" y2="21"></line>
+              </svg>
+            </div>
+            <h4 style="margin-bottom: 6px;">Mobilier & Assises</h4>
+            <p style="font-size: 13px; color: var(--color-mist-gray); margin-bottom: 12px;">Fauteuils lounge et tables en ardoise</p>
+            <span class="link-mint" style="font-size: 13px;">Voir la sélection →</span>
+          </a>
+
+          <!-- CATÉGORIE 3 : Audio -->
+          <a href="produits?cat=audio" class="card" style="text-align: center; padding: 32px 20px;">
+            <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(54, 244, 164, 0.08); color: var(--color-shopify-mint); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+              </svg>
+            </div>
+            <h4 style="margin-bottom: 6px;">Audio & Technologie</h4>
+            <p style="font-size: 13px; color: var(--color-mist-gray); margin-bottom: 12px;">Enceintes en noyer et casques ANC</p>
+            <span class="link-mint" style="font-size: 13px;">Voir la sélection →</span>
+          </a>
+
+          <!-- CATÉGORIE 4 : Accessoires -->
+          <a href="produits?cat=accessoires" class="card" style="text-align: center; padding: 32px 20px;">
+            <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(54, 244, 164, 0.08); color: var(--color-shopify-mint); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="7"></circle>
+                <polyline points="12 9 12 12 13.5 13.5"></polyline>
+                <path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83"></path>
+              </svg>
+            </div>
+            <h4 style="margin-bottom: 6px;">Accessoires & Bureau</h4>
+            <p style="font-size: 13px; color: var(--color-mist-gray); margin-bottom: 12px;">Plateaux Monolith et montres titane</p>
+            <span class="link-mint" style="font-size: 13px;">Voir la sélection →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- 6. PIÈCES PHARES / SÉLECTION POPULAIRE -->
+    <!-- ==================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <span class="eyebrow eyebrow--mint">Sélection du Moment</span>
+            <!-- TITRE SECTION PHARES -->
+            <h2>Les créations les plus plébiscitées</h2>
+          </div>
+          <!-- LIEN VERS CATALOGUE COMPLET -->
+          <a href="produits" class="link-mint">
+            <span>Consulter l'ensemble du catalogue</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <div class="grid grid-3">
+          
+          <!-- CARTE PRODUIT 1 : Enceinte Krona Sound 1 -->
+          <article class="product-card">
+            <div class="product-card__media">
+              <span class="badge badge-mint product-card__badge">Populaire</span>
+              <!-- IMAGE PRODUIT 1 : remplacez l'URL ci-dessous -->
+              <a href="produit?id=prod-002">
+                <img class="product-card__img" src="https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1200&q=80" alt="Enceinte Krona Sound 1">
+              </a>
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">Audio & Technologie</span>
+              <!-- TITRE PRODUIT 1 -->
+              <h3 class="product-card__title">
+                <a href="produit?id=prod-002">Enceinte Studio Krona Sound I</a>
+              </h3>
+              <!-- DESCRIPTION PRODUIT 1 -->
+              <p class="product-card__desc">Enceinte sans fil haute fidélité enveloppée de laine acoustique Kvadrat et châssis noyer huilé.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price-box">
+                  <!-- PRIX PRODUIT 1 -->
+                  <span class="product-card__price">490 €</span>
+                </div>
+                <div class="product-card__actions">
+                  <a href="produit?id=prod-002" class="btn btn-ghost btn-sm">Fiche</a>
+                  <!-- LIEN D'ACHAT EXTERNE 1 -->
+                  <a href="https://shopify.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    Acheter
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARTE PRODUIT 2 : Fauteuil Lounge 03 -->
+          <article class="product-card">
+            <div class="product-card__media">
+              <span class="badge badge-white product-card__badge">Édition Limitée</span>
+              <!-- IMAGE PRODUIT 2 : remplacez l'URL ci-dessous -->
+              <a href="produit?id=prod-003">
+                <img class="product-card__img" src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=1200&q=80" alt="Fauteuil Minimaliste Lounge 03">
+              </a>
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">Mobilier & Assises</span>
+              <!-- TITRE PRODUIT 2 -->
+              <h3 class="product-card__title">
+                <a href="produit?id=prod-003">Fauteuil Minimaliste Lounge 03</a>
+              </h3>
+              <!-- DESCRIPTION PRODUIT 2 -->
+              <p class="product-card__desc">Acier tubulaire thermo-laqué noir mat et sellerie en cuir végétal pleine fleur patiné main.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price-box">
+                  <!-- PRIX PRODUIT 2 -->
+                  <span class="product-card__price">890 €</span>
+                </div>
+                <div class="product-card__actions">
+                  <a href="produit?id=prod-003" class="btn btn-ghost btn-sm">Fiche</a>
+                  <!-- LIEN D'ACHAT EXTERNE 2 -->
+                  <a href="https://etsy.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    Acheter
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARTE PRODUIT 3 : Montre Automatique Horizon -->
+          <article class="product-card">
+            <div class="product-card__media">
+              <span class="badge badge-mint product-card__badge">Nouveau</span>
+              <!-- IMAGE PRODUIT 3 : remplacez l'URL ci-dessous -->
+              <a href="produit?id=prod-004">
+                <img class="product-card__img" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80" alt="Montre Automatique Krona Horizon">
+              </a>
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">Accessoires & Bureau</span>
+              <!-- TITRE PRODUIT 3 -->
+              <h3 class="product-card__title">
+                <a href="produit?id=prod-004">Montre Automatique Krona Horizon</a>
+              </h3>
+              <!-- DESCRIPTION PRODUIT 3 -->
+              <p class="product-card__desc">Boîtier 39mm en titane grade 5 brossé, mouvement mécanique automatique suisse et cadran texturé vert forêt.</p>
+              <div class="product-card__footer">
+                <div class="product-card__price-box">
+                  <!-- PRIX PRODUIT 3 -->
+                  <span class="product-card__price">640 €</span>
+                  <span class="product-card__old-price">720 €</span>
+                </div>
+                <div class="product-card__actions">
+                  <a href="produit?id=prod-004" class="btn btn-ghost btn-sm">Fiche</a>
+                  <!-- LIEN D'ACHAT EXTERNE 3 -->
+                  <a href="https://amazon.fr" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    Acheter
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- 7. SECTION MANIFESTE / SAVOIR-FAIRE (Split 2 colonnes) -->
+    <!-- ==================================================================== -->
+    <section class="section" style="background-color: var(--surface-card); border-top: 1px solid var(--color-spruce-border);">
+      <div class="container">
+        <div class="split">
+          <div>
+            <span class="eyebrow eyebrow--mint">L'Artisanat de Précision</span>
+            <!-- TITRE SECTION SAVOIR-FAIRE -->
+            <h2>Chaque courbe a une raison d'être, chaque arête est pensée.</h2>
+            <!-- TEXTE SECTION SAVOIR-FAIRE -->
+            <p class="lead">
+              Nous réfutons l'éphémère. Dans notre atelier, les objets sont dessinés pour vieillir avec élégance et traverser les décennies sans perdre leur pertinence.
+            </p>
+            <p>
+              En éliminant tout artifice tape-à-l'œil, nous laissons s'exprimer la franchise des matériaux : le froid soyeux de l'aluminium anodisé, le grain profond du noyer huilé à cœur, et la patine noble des cuirs tannés sans solvant.
+            </p>
+
+            <div style="display: flex; gap: 24px; margin-top: 32px;">
+              <div>
+                <div style="font-size: 36px; font-weight: var(--fw-light); color: var(--color-pure-white); line-height: 1;">100%</div>
+                <div style="font-size: 13px; color: var(--color-mist-gray); margin-top: 4px;">Réparable à vie</div>
+              </div>
+              <div style="border-left: 1px solid var(--color-spruce-border); padding-left: 24px;">
+                <div style="font-size: 36px; font-weight: var(--fw-light); color: var(--color-shopify-mint); line-height: 1;">5 Ans</div>
+                <div style="font-size: 13px; color: var(--color-mist-gray); margin-top: 4px;">Garantie intégrale</div>
+              </div>
+              <div style="border-left: 1px solid var(--color-spruce-border); padding-left: 24px;">
+                <div style="font-size: 36px; font-weight: var(--fw-light); color: var(--color-pure-white); line-height: 1;">45+</div>
+                <div style="font-size: 13px; color: var(--color-mist-gray); margin-top: 4px;">Points de vente officiels</div>
+              </div>
+            </div>
+
+            <div style="margin-top: 40px;">
+              <!-- LIEN : vers la page À Propos -->
+              <a href="about" class="link-mint">
+                <span>Découvrir l'histoire complète de l'atelier</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- IMAGE SAVOIR-FAIRE : remplacez l'URL src="https://..." ci-dessous -->
+          <div style="border-radius: var(--radius-cards); overflow: hidden; border: 1px solid var(--color-spruce-border); box-shadow: var(--shadow-card);">
+            <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1200&q=80" alt="Usinage de précision dans l'atelier Krona" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- 8. TÉMOIGNAGES & AVIS CLIENTS -->
+    <!-- ==================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow eyebrow--mint">Retours d'Expérience</span>
+          <!-- TITRE TÉMOIGNAGES -->
+          <h2>Adopté par les architectes, designers & collectionneurs</h2>
+          <!-- TEXTE TÉMOIGNAGES -->
+          <p>Découvrez ce que disent les passionnés qui partagent leur quotidien avec nos créations.</p>
+        </div>
+
+        <div class="grid grid-3">
+          
+          <!-- AVIS 1 -->
+          <div class="card">
+            <div style="display: flex; gap: 4px; color: #ffb800; margin-bottom: 16px;">★★★★★</div>
+            <p style="font-size: 15px; font-style: italic; color: var(--color-sage-gray); margin-bottom: 20px;">
+              « La lampe Krona Arch est devenue la pièce maîtresse des projets que je livre à mes clients. La finition de l'aluminium et la chaleur de la lumière sont d'une justesse rare. »
+            </p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <!-- IMAGE AVATAR 1 -->
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Julien V." style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;">
+              <div>
+                <div style="font-size: 14px; font-weight: var(--fw-semibold); color: var(--color-pure-white);">Julien V.</div>
+                <div style="font-size: 12px; color: var(--color-mist-gray);">Architecte d'intérieur — Paris</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AVIS 2 -->
+          <div class="card">
+            <div style="display: flex; gap: 4px; color: #ffb800; margin-bottom: 16px;">★★★★★</div>
+            <p style="font-size: 15px; font-style: italic; color: var(--color-sage-gray); margin-bottom: 20px;">
+              « L'enceinte Krona Sound I n'est pas seulement un bel objet de décoration : le rendu sonore a surpassé toutes mes attentes. L'achat via Shopify s'est fait de façon limpide. »
+            </p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <!-- IMAGE AVATAR 2 -->
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=120&q=80" alt="Hélène de M." style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;">
+              <div>
+                <div style="font-size: 14px; font-weight: var(--fw-semibold); color: var(--color-pure-white);">Hélène de M.</div>
+                <div style="font-size: 12px; color: var(--color-mist-gray);">Acheteuse vérifiée Shopify</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AVIS 3 -->
+          <div class="card">
+            <div style="display: flex; gap: 4px; color: #ffb800; margin-bottom: 16px;">★★★★★</div>
+            <p style="font-size: 15px; font-style: italic; color: var(--color-sage-gray); margin-bottom: 20px;">
+              « Un service client irréprochable qui a pris le temps de nous envoyer des échantillons de cuir avant commande. Le fauteuil Lounge 03 est spectaculaire. »
+            </p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <!-- IMAGE AVATAR 3 -->
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Marc & Sophie B." style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover;">
+              <div>
+                <div style="font-size: 14px; font-weight: var(--fw-semibold); color: var(--color-pure-white);">Marc & Sophie B.</div>
+                <div style="font-size: 12px; color: var(--color-mist-gray);">Collectionneurs — Lyon</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================== -->
+    <!-- 9. GRAND CALL-TO-ACTION (Appel à l'action) -->
+    <!-- ==================================================================== -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="card-showcase" style="text-align: center; padding: 64px 32px;">
+          <span class="eyebrow eyebrow--mint">Prêt à transformer votre intérieur ?</span>
+          <!-- TITRE CTA -->
+          <h2 style="max-width: 650px; margin: 12px auto 20px auto;">
+            Explorez notre catalogue ou échangez avec nos designers
+          </h2>
+          <!-- TEXTE CTA -->
+          <p style="max-width: 540px; margin: 0 auto 32px auto; font-size: 17px;">
+            Consultez les caractéristiques techniques de nos modèles et trouvez le point de vente le plus adapté pour passer commande.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+            <!-- BOUTON 1 CTA -->
+            <a href="produits" class="btn btn-primary btn-lg">
+              <span>Voir tous les produits</span>
+            </a>
+            <!-- BOUTON 2 CTA -->
+            <a href="contact" class="btn btn-ghost btn-lg">
+              <span>Poser une question</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================================================================== -->
+  <!-- 10. PIED DE PAGE (FOOTER GLOBAL) -->
+  <!-- ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        
+        <!-- Colonne 1 : Marque & Description -->
+        <div class="footer-brand">
+          <a href="./" class="site-logo">
+            <span class="site-logo__title">KRONA</span>
+            <span class="site-logo__sub">STUDIO & ATELIER</span>
+          </a>
+          <!-- TEXTE DU FOOTER -->
+          <p>
+            Éditeur et fabricant d'objets d'exception, luminaires et mobilier durable. Créations disponibles auprès de nos distributeurs agréés.
+          </p>
+          <!-- RÉSEAUX SOCIAUX -->
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Pinterest">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="4" x2="12" y2="20"></line>
+                <circle cx="12" cy="12" r="9"></circle>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Colonne 2 : Navigation propre sans .html -->
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-list">
+            <li><a href="./" class="footer-link">Accueil</a></li>
+            <li><a href="produits" class="footer-link">Catalogue produits</a></li>
+            <li><a href="about" class="footer-link">L'histoire & L'atelier</a></li>
+            <li><a href="services" class="footer-link">Services sur-mesure</a></li>
+            <li><a href="tarifs" class="footer-link">Tarifs & Packs</a></li>
+            <li><a href="faq" class="footer-link">Questions fréquentes</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 3 : Points d'achat & Liens externes -->
+        <div>
+          <h4 class="footer-title">Où Acheter ?</h4>
+          <ul class="footer-list">
+            <li><a href="https://shopify.com" target="_blank" rel="noopener noreferrer" class="footer-link">Boutique Shopify ↗</a></li>
+            <li><a href="https://amazon.fr" target="_blank" rel="noopener noreferrer" class="footer-link">Store Amazon Prime ↗</a></li>
+            <li><a href="https://etsy.com" target="_blank" rel="noopener noreferrer" class="footer-link">Atelier Etsy ↗</a></li>
+            <li><a href="contact#points-de-vente" class="footer-link">Trouver un magasin physique</a></li>
+            <li><a href="contact?sujet=devis-pro" class="footer-link">Espace Professionnels (B2B)</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 4 : Newsletter / Contact direct -->
+        <div>
+          <h4 class="footer-title">Restez Informé</h4>
+          <div class="footer-newsletter-box">
+            <p>Recevez les avant-premières de nos futures éditions numérotées.</p>
+            <form class="footer-newsletter-form">
+              <input type="email" class="footer-newsletter-input" placeholder="Votre adresse email..." required>
+              <button type="submit" class="btn btn-mint btn-sm" aria-label="S'inscrire à la newsletter">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div style="margin-top: 16px; font-size: 13px; color: var(--color-mist-gray);">
+            Contact direct : <a href="mailto:bonjour@atelier-krona.fr" class="link-mint">bonjour@atelier-krona.fr</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Atelier Krona — Template Vitrine Professionnel pour la Vente de Produits.
+        </div>
+        <div class="footer-legal-links">
+          <a href="faq">Mentions légales</a>
+          <a href="faq">Politique de confidentialité</a>
+          <a href="contact">Points de contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts Modulaires -->
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

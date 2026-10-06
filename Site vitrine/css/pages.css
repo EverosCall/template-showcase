@@ -1,0 +1,706 @@
+/* ==========================================================================
+   ATELIER KRONA — PAGES STYLES
+   Styles spécifiques : Hero, Showcase, Catalogue, Fiche Produit, À Propos, etc.
+   ========================================================================== */
+
+/* ==========================================================================
+   1. HERO SECTION (Accueil)
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  padding-top: var(--spacing-64);
+  padding-bottom: var(--spacing-80);
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(54, 244, 164, 0.08) 0%, rgba(7, 39, 32, 0.03) 60%, transparent 80%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto var(--spacing-56) auto;
+}
+
+.hero-title {
+  margin-top: var(--spacing-16);
+  margin-bottom: var(--spacing-20);
+}
+
+.hero-title span.mint {
+  color: var(--color-shopify-mint);
+  font-weight: var(--fw-regular);
+}
+
+.hero-subtitle {
+  font-size: var(--text-subheading);
+  line-height: var(--leading-subheading);
+  color: var(--color-sage-gray);
+  max-width: 680px;
+  margin: 0 auto var(--spacing-32) auto;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-16);
+  flex-wrap: wrap;
+}
+
+/* Showcase Card intégrée au Hero */
+.hero-showcase {
+  position: relative;
+  z-index: 1;
+}
+
+.showcase-banner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: var(--spacing-40);
+  background-color: var(--surface-elevated); /* #072720 */
+  border: 1px solid var(--color-mossy-edge);
+  border-radius: var(--radius-largepanels); /* 20px */
+  padding: var(--spacing-40);
+  box-shadow: var(--shadow-elevated);
+}
+
+.showcase-visual {
+  position: relative;
+  border-radius: var(--radius-cards);
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  aspect-ratio: 16/10;
+}
+
+.showcase-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.showcase-banner:hover .showcase-visual img {
+  transform: scale(1.03);
+}
+
+.showcase-info h3 {
+  font-size: var(--text-heading);
+  margin-top: var(--spacing-12);
+  margin-bottom: var(--spacing-12);
+}
+
+.showcase-info p {
+  color: var(--color-sage-gray);
+  font-size: var(--text-body);
+  margin-bottom: var(--spacing-24);
+}
+
+.showcase-meta {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-16);
+  margin-bottom: var(--spacing-24);
+}
+
+.showcase-price {
+  font-size: 32px;
+  font-weight: var(--fw-semibold);
+  color: var(--color-pure-white);
+}
+
+.showcase-old-price {
+  font-size: 18px;
+  color: var(--color-slate);
+  text-decoration: line-through;
+}
+
+/* --- BANDEAU DES REASSURANCES / ATOUTS --- */
+.guarantees-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-20);
+}
+
+.guarantee-card {
+  background-color: var(--surface-card);
+  border: 1px solid var(--color-spruce-border);
+  border-radius: var(--radius-cards);
+  padding: var(--spacing-24);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+  transition: var(--transition-fast);
+}
+
+.guarantee-card:hover {
+  border-color: rgba(54, 244, 164, 0.3);
+}
+
+.guarantee-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: rgba(54, 244, 164, 0.1);
+  color: var(--color-shopify-mint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guarantee-card h4 {
+  font-size: 17px;
+  color: var(--color-pure-white);
+}
+
+.guarantee-card p {
+  font-size: var(--text-body-sm);
+  color: var(--color-mist-gray);
+  margin-bottom: 0;
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   2. PAGE CATALOGUE & FILTRES (produits.html)
+   ========================================================================== */
+.catalog-toolbar {
+  background-color: var(--surface-card);
+  border: 1px solid var(--color-spruce-border);
+  border-radius: var(--radius-cards);
+  padding: var(--spacing-20) var(--spacing-24);
+  margin-bottom: var(--spacing-32);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+}
+
+.catalog-search-row {
+  display: flex;
+  gap: var(--spacing-16);
+  align-items: center;
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex-grow: 1;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-mist-gray);
+  pointer-events: none;
+}
+
+.search-input-wrapper input {
+  padding-left: 42px;
+}
+
+.category-pills {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  flex-wrap: wrap;
+}
+
+.category-pill-btn {
+  background-color: transparent;
+  border: 1px solid var(--color-spruce-border);
+  color: var(--color-sage-gray);
+  padding: 6px 16px;
+  border-radius: var(--radius-pills);
+  font-size: var(--text-body-sm);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.category-pill-btn:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: var(--color-pure-white);
+}
+
+.category-pill-btn.active {
+  background-color: var(--color-pure-white);
+  color: var(--color-midnight-forest);
+  border-color: var(--color-pure-white);
+  font-weight: var(--fw-semibold);
+}
+
+.category-count {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.catalog-filters-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-12);
+  padding-top: var(--spacing-12);
+  border-top: 1px solid rgba(30, 44, 49, 0.6);
+  font-size: var(--text-body-sm);
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-12);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-80) var(--spacing-20);
+  background-color: var(--surface-card);
+  border: 1px dashed var(--color-spruce-border);
+  border-radius: var(--radius-cards);
+}
+
+.empty-state-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--spacing-16) auto;
+  color: var(--color-slate);
+}
+
+/* ==========================================================================
+   3. FICHE PRODUIT DÉTAILLÉE (produit.html)
+   ========================================================================== */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  font-size: var(--text-body-sm);
+  color: var(--color-faded-steel);
+  margin-bottom: var(--spacing-32);
+}
+
+.breadcrumb a:hover {
+  color: var(--color-shopify-mint);
+}
+
+.product-detail-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: var(--spacing-56);
+  align-items: start;
+  margin-bottom: var(--spacing-80);
+}
+
+/* Galerie */
+.product-gallery {
+  position: sticky;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+}
+
+.gallery-main {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: #0b1416;
+  border: 1px solid var(--color-spruce-border);
+  border-radius: var(--radius-cards);
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-12);
+}
+
+.thumbnail-item {
+  aspect-ratio: 1/1;
+  border-radius: var(--radius-inputs);
+  border: 1px solid var(--color-spruce-border);
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #0b1416;
+  transition: var(--transition-fast);
+}
+
+.thumbnail-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail-item:hover,
+.thumbnail-item.active {
+  border-color: var(--color-shopify-mint);
+  box-shadow: 0 0 8px rgba(54, 244, 164, 0.3);
+}
+
+/* Infos produit */
+.product-info-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-header-badges {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-10);
+  margin-bottom: var(--spacing-12);
+}
+
+.product-detail-title {
+  font-size: var(--text-heading-lg);
+  line-height: var(--leading-heading-lg);
+  margin-bottom: var(--spacing-12);
+}
+
+.product-rating-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  font-size: var(--text-body-sm);
+  color: var(--color-mist-gray);
+  margin-bottom: var(--spacing-20);
+}
+
+.rating-stars {
+  color: #ffb800;
+  display: flex;
+  gap: 2px;
+}
+
+.product-price-box {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-16);
+  padding-bottom: var(--spacing-24);
+  border-bottom: 1px solid var(--color-spruce-border);
+  margin-bottom: var(--spacing-24);
+}
+
+.current-price {
+  font-size: 38px;
+  font-weight: var(--fw-semibold);
+  color: var(--color-pure-white);
+}
+
+.original-price {
+  font-size: 20px;
+  color: var(--color-slate);
+  text-decoration: line-through;
+}
+
+/* Sélecteur de Variantes */
+.variant-section {
+  margin-bottom: var(--spacing-24);
+}
+
+.variant-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-body-sm);
+  color: var(--color-pure-white);
+  font-weight: var(--fw-medium);
+  margin-bottom: var(--spacing-10);
+}
+
+.variant-label span.selected-value {
+  color: var(--color-shopify-mint);
+  font-weight: var(--fw-regular);
+}
+
+/* Swatches de couleur */
+.color-swatches {
+  display: flex;
+  gap: var(--spacing-10);
+}
+
+.color-swatch {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.color-swatch::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  background-color: var(--swatch-color);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.color-swatch:hover {
+  transform: scale(1.1);
+}
+
+.color-swatch.active {
+  border-color: var(--color-shopify-mint);
+  box-shadow: 0 0 10px rgba(54, 244, 164, 0.4);
+}
+
+/* Sélecteur de taille / format */
+.size-options {
+  display: flex;
+  gap: var(--spacing-10);
+  flex-wrap: wrap;
+}
+
+.size-pill-btn {
+  background-color: var(--surface-card);
+  border: 1px solid var(--color-spruce-border);
+  color: var(--color-pure-white);
+  padding: 8px 18px;
+  border-radius: var(--radius-pills);
+  font-size: var(--text-body-sm);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.size-pill-btn:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.size-pill-btn.active {
+  border-color: var(--color-shopify-mint);
+  background-color: rgba(54, 244, 164, 0.1);
+  color: var(--color-shopify-mint);
+  font-weight: var(--fw-semibold);
+}
+
+/* Bloc d'achat externe & boutons */
+.purchase-action-box {
+  background-color: #041214;
+  border: 1px solid var(--color-mossy-edge);
+  border-radius: var(--radius-cards);
+  padding: var(--spacing-24);
+  margin-bottom: var(--spacing-32);
+}
+
+.purchase-channel-notice {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  font-size: var(--text-caption);
+  color: var(--color-sage-gray);
+  margin-bottom: var(--spacing-16);
+}
+
+.purchase-buttons-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+}
+
+/* Onglets & spécifications */
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-body-sm);
+  margin-top: var(--spacing-16);
+}
+
+.specs-table tr {
+  border-bottom: 1px solid var(--color-spruce-border);
+}
+
+.specs-table td {
+  padding: 12px 0;
+}
+
+.specs-table td:first-child {
+  color: var(--color-mist-gray);
+  width: 35%;
+  font-weight: var(--fw-medium);
+}
+
+.specs-table td:last-child {
+  color: var(--color-pure-white);
+}
+
+/* ==========================================================================
+   4. À PROPOS (a-propos.html)
+   ========================================================================== */
+.stats-banner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-24);
+  background-color: var(--surface-card);
+  border: 1px solid var(--color-spruce-border);
+  border-radius: var(--radius-cards);
+  padding: var(--spacing-40) var(--spacing-24);
+  text-align: center;
+  margin: var(--spacing-64) 0;
+}
+
+.stat-item .stat-number {
+  font-size: 48px;
+  font-weight: var(--fw-light);
+  color: var(--color-pure-white);
+  line-height: 1;
+  margin-bottom: var(--spacing-8);
+}
+
+.stat-item .stat-number span.mint {
+  color: var(--color-shopify-mint);
+}
+
+.stat-item .stat-label {
+  font-size: var(--text-body-sm);
+  color: var(--color-sage-gray);
+}
+
+/* ==========================================================================
+   5. TARIFS & PACKS (tarifs.html)
+   ========================================================================== */
+.pricing-card {
+  background-color: var(--surface-card);
+  border: 1px solid var(--color-spruce-border);
+  border-radius: var(--radius-cards);
+  padding: var(--spacing-32);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.pricing-card.is-popular {
+  background-color: var(--surface-elevated);
+  border-color: var(--color-shopify-mint);
+  box-shadow: var(--shadow-elevated), 0 0 30px rgba(54, 244, 164, 0.1);
+}
+
+.pricing-card__price-box {
+  margin: var(--spacing-24) 0;
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-8);
+}
+
+.pricing-card__price {
+  font-size: 44px;
+  font-weight: var(--fw-semibold);
+  color: var(--color-pure-white);
+}
+
+.pricing-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+  margin-bottom: var(--spacing-32);
+  flex-grow: 1;
+}
+
+.pricing-features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-10);
+  font-size: var(--text-body-sm);
+  color: var(--color-sage-gray);
+}
+
+.pricing-features-list li svg {
+  color: var(--color-shopify-mint);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   6. CONTACT (contact.html)
+   ========================================================================== */
+.contact-info-card {
+  background-color: var(--surface-card);
+  border: 1px solid var(--color-spruce-border);
+  border-radius: var(--radius-cards);
+  padding: var(--spacing-24);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-16);
+}
+
+.contact-info-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background-color: rgba(54, 244, 164, 0.1);
+  color: var(--color-shopify-mint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Form Success Banner */
+.form-success-alert {
+  display: none;
+  background-color: rgba(7, 39, 32, 0.9);
+  border: 1px solid var(--color-shopify-mint);
+  border-radius: var(--radius-cards);
+  padding: var(--spacing-24);
+  text-align: center;
+  margin-bottom: var(--spacing-24);
+}
+
+.form-success-alert.is-visible {
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .showcase-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .guarantees-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-banner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-32);
+  }
+}
+
+@media (max-width: 600px) {
+  .guarantees-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-banner {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foire Aux Questions — ATELIER KRONA</title>
+  <meta name="description" content="Toutes les réponses à vos questions : commandes, livraison express, garantie 10 ans, réparabilité et modalités d'achat auprès de nos revendeurs agréés.">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2336f4a4'><circle cx='12' cy='12' r='9'/></svg>">
+
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!--
+  ====================================================================
+  💡 GUIDE DÉBUTANT : COMMENT MODIFIER LA FOIRE AUX QUESTIONS (FAQ)
+  ====================================================================
+  Les questions et réponses de cette FAQ sont stockées dans le fichier :
+  👉 "js/products.js" (rubrique CATALOG_DATA.faq)
+  
+  Pour modifier ou ajouter des questions/réponses :
+  Ouvrez "js/products.js" et modifiez les textes "q" (question) et "a" (réponse).
+  
+  Pour modifier les textes d'en-tête de cette page, faites CTRL + F :
+  - <!-- TITRE : pour changer les titres et sous-titres
+  - <!-- BOUTON : pour modifier les boutons et liens
+  ====================================================================
+  -->
+
+  <!-- ==================================================================== -->
+  <!-- 1. BANNIÈRE D'ANNONCE -->
+  <!-- ==================================================================== -->
+  <aside class="announcement-bar" role="region" aria-label="Annonce">
+    <span class="badge badge-mint">ASSISTANCE</span>
+    <span>Une question sur nos créations ? Notre atelier vous répond sous 24-48h.</span>
+    <button class="announcement-close" aria-label="Fermer l'annonce">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </aside>
+
+  <!-- ==================================================================== -->
+  <!-- 2. EN-TÊTE / NAVIGATION (URLS PROPRES) -->
+  <!-- ==================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-container" aria-label="Navigation principale">
+        
+        <!-- LOGO DU SITE -->
+        <a href="./" class="site-logo">
+          <span class="site-logo__title">KRONA</span>
+          <span class="site-logo__sub">STUDIO & ATELIER</span>
+        </a>
+
+        <!-- MENU PRINCIPAL -->
+        <ul class="nav-menu">
+          <li><a href="./" class="nav-link">Accueil</a></li>
+          <li><a href="produits" class="nav-link">Catalogue</a></li>
+          <li><a href="about" class="nav-link">À Propos</a></li>
+          <li><a href="services" class="nav-link">Services</a></li>
+          <li><a href="tarifs" class="nav-link">Tarifs & Packs</a></li>
+          <li><a href="faq" class="nav-link active">FAQ</a></li>
+          <li><a href="contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- ACTIONS & SÉLECTEUR DE TRADUCTION -->
+        <div class="nav-actions">
+          <div class="lang-switcher-wrap">
+            <button type="button" class="lang-pill-btn" id="lang-toggle-btn" title="Traduire en Anglais / Switch to English" aria-label="Changer de langue">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span class="lang-text">FR / EN</span>
+            </button>
+            <div id="google_translate_element"></div>
+          </div>
+          <!-- BOUTON DU HEADER -->
+          <a href="contact" class="btn btn-primary btn-sm">
+            <span>Poser une Question</span>
+          </a>
+          <button class="mobile-toggle" aria-label="Ouvrir le menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================================================================== -->
+  <!-- MENU MOBILE LATÉRAL -->
+  <!-- ==================================================================== -->
+  <div class="mobile-nav" role="dialog" aria-modal="true" aria-label="Menu mobile">
+    <div class="mobile-nav-header">
+      <div class="site-logo">
+        <span class="site-logo__title">KRONA</span>
+        <span class="site-logo__sub">STUDIO & ATELIER</span>
+      </div>
+      <button class="mobile-nav-close announcement-close" aria-label="Fermer le menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <ul class="mobile-nav-menu">
+      <li><a href="./" class="mobile-nav-link">Accueil</a></li>
+      <li><a href="produits" class="mobile-nav-link">Catalogue de produits</a></li>
+      <li><a href="about" class="mobile-nav-link">L'histoire & L'atelier</a></li>
+      <li><a href="services" class="mobile-nav-link">Services & Sur-mesure</a></li>
+      <li><a href="tarifs" class="mobile-nav-link">Tarifs & Packs</a></li>
+      <li><a href="faq" class="mobile-nav-link active">Questions fréquentes</a></li>
+      <li><a href="contact" class="mobile-nav-link">Contact & Revendeurs</a></li>
+    </ul>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px;">
+      <button type="button" class="lang-pill-btn" id="mobile-lang-toggle-btn" style="justify-content: center; padding: 10px 16px; font-size: 13px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span class="lang-text">Switch to English (EN)</span>
+      </button>
+      <a href="contact" class="btn btn-primary btn-full">Poser une question</a>
+    </div>
+  </div>
+
+  <main class="section" style="padding-top: 56px;">
+    <div class="container">
+      
+      <!-- ==================================================================== -->
+      <!-- 3. EN-TÊTE DE LA PAGE FAQ -->
+      <!-- ==================================================================== -->
+      <div class="section-header text-center">
+        <span class="eyebrow eyebrow--mint">Centre d'aide & Informations</span>
+        <!-- TITRE PRINCIPAL -->
+        <h1>Questions Fréquemment Posées</h1>
+        <!-- DESCRIPTION -->
+        <p class="lead">
+          Retrouvez toutes les précisions sur le fonctionnement de notre showroom vitrine, nos canaux de commande et nos garanties.
+        </p>
+      </div>
+
+      <div style="max-width: 840px; margin: 0 auto;">
+        
+        <!-- Barre de recherche instantanée dans la FAQ -->
+        <div class="search-input-wrapper" style="margin-bottom: 24px;">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="faq-search" class="form-input" placeholder="Rechercher une question (ex: acheter, livraison, garantie, retour, délai)...">
+        </div>
+
+        <!-- Filtres thématiques par catégorie (gérés par js/faq.js) -->
+        <div id="faq-category-filters" class="category-pills" style="margin-bottom: 40px; justify-content: center;"></div>
+
+        <!-- CONTENEUR ACCORDÉONS FAQ (Injecté par js/faq.js) -->
+        <div id="faq-container"></div>
+
+        <!-- BLOC DE CONTACT SI AUCUNE QUESTION NE CORRESPOND -->
+        <div class="card" style="margin-top: 56px; padding: 36px; text-align: center; background-color: var(--surface-card);">
+          <div class="guarantee-icon" style="margin: 0 auto 16px auto;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <!-- TITRE BLOC ASSISTANCE -->
+          <h3 style="margin-bottom: 8px;">Vous ne trouvez pas la réponse souhaitée ?</h3>
+          <!-- TEXTE BLOC ASSISTANCE -->
+          <p style="font-size: 14px; color: var(--color-sage-gray); max-width: 500px; margin: 0 auto 24px auto;">
+            Notre équipe se tient à votre entière disposition pour répondre à toutes vos interrogations techniques ou commerciales.
+          </p>
+          <!-- BOUTON VERS CONTACT -->
+          <a href="contact" class="btn btn-primary btn-sm">
+            <span>Contacter notre équipe</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==================================================================== -->
+  <!-- 4. PIED DE PAGE (FOOTER GLOBAL) -->
+  <!-- ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="./" class="site-logo">
+            <span class="site-logo__title">KRONA</span>
+            <span class="site-logo__sub">STUDIO & ATELIER</span>
+          </a>
+          <p>Éditeur d'objets d'exception, luminaires et mobilier durable. Créations disponibles auprès de nos distributeurs agréés.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-list">
+            <li><a href="./" class="footer-link">Accueil</a></li>
+            <li><a href="produits" class="footer-link">Catalogue</a></li>
+            <li><a href="about" class="footer-link">À Propos</a></li>
+            <li><a href="services" class="footer-link">Services</a></li>
+            <li><a href="tarifs" class="footer-link">Tarifs & Packs</a></li>
+            <li><a href="faq" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Canaux d'achat</h4>
+          <ul class="footer-list">
+            <li><a href="https://shopify.com" target="_blank" rel="noopener noreferrer" class="footer-link">Shopify Store ↗</a></li>
+            <li><a href="https://amazon.fr" target="_blank" rel="noopener noreferrer" class="footer-link">Amazon Prime ↗</a></li>
+            <li><a href="https://etsy.com" target="_blank" rel="noopener noreferrer" class="footer-link">Etsy Atelier ↗</a></li>
+            <li><a href="contact" class="footer-link">Points de vente physiques</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Support Client</h4>
+          <p style="font-size: 13px; color: var(--color-mist-gray); margin-bottom: 12px;">Une question technique sur une pièce ?</p>
+          <a href="mailto:bonjour@atelier-krona.fr" class="btn btn-ghost btn-sm btn-full">Écrire au support</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Atelier Krona — Centre d'aide.</div>
+        <div class="footer-legal-links">
+          <a href="faq">Mentions légales</a>
+          <a href="faq">Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts Modulaires -->
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

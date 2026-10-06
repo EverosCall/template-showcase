@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Accompagnement — ATELIER KRONA</title>
+  <meta name="description" content="Découvrez les services Atelier Krona : personnalisation sur-mesure, gravure, livraison avec installation, garantie 10 ans et accompagnement pour architectes.">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2336f4a4'><circle cx='12' cy='12' r='9'/></svg>">
+
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!--
+  ====================================================================
+  💡 GUIDE DÉBUTANT : COMMENT MODIFIER CETTE PAGE SERVICES
+  ====================================================================
+  Pour modifier rapidement les textes ou offres de cette page :
+  Faites CTRL + F et recherchez :
+  - <!-- TITRE : pour changer les titres et sous-titres
+  - <!-- TEXTE : pour changer les descriptions des services
+  - <!-- BOUTON : pour changer les textes et liens des boutons
+  ====================================================================
+  -->
+
+  <!-- ==================================================================== -->
+  <!-- 1. BANNIÈRE D'ANNONCE -->
+  <!-- ==================================================================== -->
+  <aside class="announcement-bar" role="region" aria-label="Annonce">
+    <span class="badge badge-mint">SERVICE PRO</span>
+    <!-- TEXTE : annonce du service pro -->
+    <span>Architectes & Décorateurs : profitez d'échantillons de matières expédiés sous 48h.</span>
+    <button class="announcement-close" aria-label="Fermer l'annonce">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </aside>
+
+  <!-- ==================================================================== -->
+  <!-- 2. EN-TÊTE / NAVIGATION (URLS PROPRES) -->
+  <!-- ==================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-container" aria-label="Navigation principale">
+        
+        <!-- LOGO DU SITE -->
+        <a href="./" class="site-logo">
+          <span class="site-logo__title">KRONA</span>
+          <span class="site-logo__sub">STUDIO & ATELIER</span>
+        </a>
+
+        <!-- MENU PRINCIPAL -->
+        <ul class="nav-menu">
+          <li><a href="./" class="nav-link">Accueil</a></li>
+          <li><a href="produits" class="nav-link">Catalogue</a></li>
+          <li><a href="about" class="nav-link">À Propos</a></li>
+          <li><a href="services" class="nav-link active">Services</a></li>
+          <li><a href="tarifs" class="nav-link">Tarifs & Packs</a></li>
+          <li><a href="faq" class="nav-link">FAQ</a></li>
+          <li><a href="contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- ACTIONS & SÉLECTEUR DE TRADUCTION -->
+        <div class="nav-actions">
+          <div class="lang-switcher-wrap">
+            <button type="button" class="lang-pill-btn" id="lang-toggle-btn" title="Traduire en Anglais / Switch to English" aria-label="Changer de langue">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span class="lang-text">FR / EN</span>
+            </button>
+            <div id="google_translate_element"></div>
+          </div>
+          <!-- BOUTON DU HEADER -->
+          <a href="contact?sujet=devis-pro" class="btn btn-primary btn-sm">
+            <span>Demander un Devis</span>
+          </a>
+          <button class="mobile-toggle" aria-label="Ouvrir le menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================================================================== -->
+  <!-- MENU MOBILE LATÉRAL -->
+  <!-- ==================================================================== -->
+  <div class="mobile-nav" role="dialog" aria-modal="true" aria-label="Menu mobile">
+    <div class="mobile-nav-header">
+      <div class="site-logo">
+        <span class="site-logo__title">KRONA</span>
+        <span class="site-logo__sub">STUDIO & ATELIER</span>
+      </div>
+      <button class="mobile-nav-close announcement-close" aria-label="Fermer le menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <ul class="mobile-nav-menu">
+      <li><a href="./" class="mobile-nav-link">Accueil</a></li>
+      <li><a href="produits" class="mobile-nav-link">Catalogue de produits</a></li>
+      <li><a href="about" class="mobile-nav-link">L'histoire & L'atelier</a></li>
+      <li><a href="services" class="mobile-nav-link active">Services & Sur-mesure</a></li>
+      <li><a href="tarifs" class="mobile-nav-link">Tarifs & Packs</a></li>
+      <li><a href="faq" class="mobile-nav-link">Questions fréquentes</a></li>
+      <li><a href="contact" class="mobile-nav-link">Contact & Revendeurs</a></li>
+    </ul>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px;">
+      <button type="button" class="lang-pill-btn" id="mobile-lang-toggle-btn" style="justify-content: center; padding: 10px 16px; font-size: 13px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span class="lang-text">Switch to English (EN)</span>
+      </button>
+      <a href="contact?sujet=devis-pro" class="btn btn-primary btn-full">Demander un devis pro</a>
+    </div>
+  </div>
+
+  <main class="section" style="padding-top: 56px;">
+    <div class="container">
+      
+      <!-- ==================================================================== -->
+      <!-- 3. EN-TÊTE DE LA PAGE SERVICES -->
+      <!-- ==================================================================== -->
+      <div class="section-header text-center">
+        <span class="eyebrow eyebrow--mint">Accompagnement & Savoir-faire</span>
+        <!-- TITRE PRINCIPAL -->
+        <h1>Des services pensés pour sublimer chaque projet</h1>
+        <!-- TEXTE D'INTRODUCTION -->
+        <p class="lead">
+          Au-delà de nos pièces en collection permanente, notre atelier vous accompagne de la personnalisation sur-mesure jusqu'à la mise en place sur site.
+        </p>
+      </div>
+
+      <!-- ==================================================================== -->
+      <!-- 4. GRILLE DES 4 SERVICES SUR-MESURE -->
+      <!-- ==================================================================== -->
+      <div class="grid grid-2" style="margin-bottom: 80px;">
+        
+        <!-- SERVICE 1 : Personnalisation -->
+        <div class="card" style="padding: 36px; display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+            <div class="guarantee-icon" style="width: 50px; height: 50px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              </svg>
+            </div>
+            <span class="badge badge-mint">Sur Devis</span>
+          </div>
+          <!-- TITRE SERVICE 1 -->
+          <h3 style="font-size: 22px; margin-bottom: 8px;">Créations & Finitions Sur-Mesure</h3>
+          <!-- TEXTE SERVICE 1 -->
+          <p style="color: var(--color-mist-gray); font-size: 14px; margin-bottom: 16px;">
+            Gravure de monogrammes, cotes personnalisées ou sélection d'essences de bois rares.
+          </p>
+          <p style="font-size: 15px; margin-bottom: 24px;">
+            Pour vos projets résidentiels ou hôteliers, nous adaptons les dimensions, les câblages ou les traitements de surface de nos pièces phares selon vos contraintes techniques.
+          </p>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; flex-grow: 1;">
+            <li style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--color-pure-white);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-shopify-mint)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Choix parmi 12 teintes de cuir certifiées</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--color-pure-white);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-shopify-mint)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Gravure laser de précision ou usinage personnalisé</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--color-pure-white);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-shopify-mint)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Modélisation 3D préalable pour validation</span>
+            </li>
+          </ul>
+          <!-- BOUTON SERVICE 1 -->
+          <a href="contact?sujet=personnalisation-sur-mesure" class="btn btn-ghost btn-sm">
+            <span>Échanger sur un projet spécifique →</span>
+          </a>
+        </div>
+
+        <!-- SERVICE 2 : Livraison Blanche -->
+        <div class="card" style="padding: 36px; display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+            <div class="guarantee-icon" style="width: 50px; height: 50px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <span class="badge badge-white">Inclus Mobilier</span>
+          </div>
+          <!-- TITRE SERVICE 2 -->
+          <h3 style="font-size: 22px; margin-bottom: 8px;">Livraison Blanche & Installation</h3>
+          <!-- TEXTE SERVICE 2 -->
+          <p style="color: var(--color-mist-gray); font-size: 14px; margin-bottom: 16px;">
+            Une logistique haute couture de notre atelier jusqu'à votre pièce de vie.
+          </p>
+          <p style="font-size: 15px; margin-bottom: 24px;">
+            Toutes nos pièces de mobilier volumineuses sont prises en charge par des transporteurs spécialisés dans les œuvres d'art et le design. Déballage soigné et reprise des emballages inclus.
+          </p>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; flex-grow: 1;">
+            <li style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--color-pure-white);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-shopify-mint)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Créneau fixe de 2 heures convenu à l'avance</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--color-pure-white);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-shopify-mint)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Équipe de 2 professionnels avec gants de manipulation</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--color-pure-white);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-shopify-mint)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Mise en place dans la pièce et reprise des cartons</span>
+            </li>
+          </ul>
+          <!-- BOUTON SERVICE 2 -->
+          <a href="faq" class="btn btn-ghost btn-sm">
+            <span>Consulter les modalités de livraison →</span>
+          </a>
+        </div>
+
+        <!-- SERVICE 3 : Garantie & Réparation -->
+        <div class="card" style="padding: 36px; display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+            <div class="guarantee-icon" style="width: 50px; height: 50px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <span class="badge badge-mint">5 à 10 Ans</span>
+          </div>
+          <!-- TITRE SERVICE 3 -->
+          <h3 style="font-size: 22px; margin-bottom: 8px;">Garantie Étendue & Réparabilité</h3>
+          <!-- TEXTE SERVICE 3 -->
+          <p style="color: var(--color-mist-gray); font-size: 14px; margin-bottom: 16px;">
+            La promesse d'objets conçus pour traverser les générations.
+          </p>
+          <p style="font-size: 15px; margin-bottom: 24px;">
+            Nous maintenons un stock permanent de toutes les pièces d'usure (drivers LED, câbles tressés, visserie inox, patins feutre). Un diagnostic est proposé gratuitement sur simple envoi de photographies.
+          </p>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; flex-grow: 1;">
+            <li style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--color-pure-white);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-shopify-mint)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Pièces détachées conservées au moins 15 ans</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--color-pure-white);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-shopify-mint)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Atelier de maintenance basé en France</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--color-pure-white);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-shopify-mint)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Prise en charge intégrale en cas de défaut d'usinage</span>
+            </li>
+          </ul>
+          <!-- BOUTON SERVICE 3 -->
+          <a href="contact?sujet=sav-garantie" class="btn btn-ghost btn-sm">
+            <span>Contacter le support atelier →</span>
+          </a>
+        </div>
+
+        <!-- SERVICE 4 : Espace Pro B2B -->
+        <div class="card" style="padding: 36px; display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+            <div class="guarantee-icon" style="width: 50px; height: 50px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <span class="badge badge-mint">Architectes & Hôtellerie</span>
+          </div>
+          <!-- TITRE SERVICE 4 -->
+          <h3 style="font-size: 22px; margin-bottom: 8px;">Programme Professionnels & B2B</h3>
+          <!-- TEXTE SERVICE 4 -->
+          <p style="color: var(--color-mist-gray); font-size: 14px; margin-bottom: 16px;">
+            Accompagnement dédié pour agences, prescripteurs et restaurateurs.
+          </p>
+          <p style="font-size: 15px; margin-bottom: 24px;">
+            Accédez à nos conditions préférentielles dès la première pièce d'un projet, téléchargez les modèles numériques pour vos rendus et recevez nos boîtes d'échantillons sous 48 heures.
+          </p>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; flex-grow: 1;">
+            <li style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--color-pure-white);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-shopify-mint)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Grille tarifaire professionnelle dégressive</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--color-pure-white);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-shopify-mint)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Fichiers 3D (STEP, DWG, OBJ) et courbes photométriques</span>
+            </li>
+            <li style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--color-pure-white);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-shopify-mint)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Interlocuteur unique joignable sur ligne directe</span>
+            </li>
+          </ul>
+          <!-- BOUTON SERVICE 4 -->
+          <a href="contact?sujet=devis-professionnel" class="btn btn-primary btn-sm">
+            <span>Ouvrir un compte professionnel →</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- FAQ RAPIDE SUR LES SERVICES -->
+      <div class="card" style="padding: 40px; background-color: var(--surface-card);">
+        <h3 style="margin-bottom: 16px;">Questions sur nos services personnalisés ?</h3>
+        <p style="margin-bottom: 24px; font-size: 15px;">
+          Les délais de fabrication sur-mesure varient habituellement entre 2 et 5 semaines selon la complexité et les matières sélectionnées. Notre équipe étudie chaque demande sous 24h ouvrées.
+        </p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="contact" class="btn btn-primary btn-sm">Prendre contact avec l'atelier</a>
+          <a href="tarifs" class="btn btn-ghost btn-sm">Consulter les tarifs & packs</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==================================================================== -->
+  <!-- 5. PIED DE PAGE (FOOTER GLOBAL) -->
+  <!-- ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="./" class="site-logo">
+            <span class="site-logo__title">KRONA</span>
+            <span class="site-logo__sub">STUDIO & ATELIER</span>
+          </a>
+          <p>Éditeur d'objets d'exception, luminaires et mobilier durable. Créations disponibles auprès de nos distributeurs agréés.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-list">
+            <li><a href="./" class="footer-link">Accueil</a></li>
+            <li><a href="produits" class="footer-link">Catalogue</a></li>
+            <li><a href="about" class="footer-link">À Propos</a></li>
+            <li><a href="services" class="footer-link">Services</a></li>
+            <li><a href="tarifs" class="footer-link">Tarifs & Packs</a></li>
+            <li><a href="faq" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Canaux d'achat</h4>
+          <ul class="footer-list">
+            <li><a href="https://shopify.com" target="_blank" rel="noopener noreferrer" class="footer-link">Shopify Store ↗</a></li>
+            <li><a href="https://amazon.fr" target="_blank" rel="noopener noreferrer" class="footer-link">Amazon Prime ↗</a></li>
+            <li><a href="https://etsy.com" target="_blank" rel="noopener noreferrer" class="footer-link">Etsy Shop ↗</a></li>
+            <li><a href="contact" class="footer-link">Revendeurs physiques</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Devis & Informations</h4>
+          <p style="font-size: 13px; color: var(--color-mist-gray); margin-bottom: 12px;">Une demande spéciale ? Notre atelier vous conseille.</p>
+          <a href="contact?sujet=devis" class="btn btn-ghost btn-sm btn-full">Demander une étude</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Atelier Krona — Services d'exception.</div>
+        <div class="footer-legal-links">
+          <a href="faq">Mentions légales</a>
+          <a href="faq">Conditions de service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts Modulaires -->
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

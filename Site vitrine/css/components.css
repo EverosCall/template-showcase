@@ -1,0 +1,545 @@
+/* ==========================================================================
+   ATELIER KRONA — COMPONENTS
+   Tokens: 9999px Pill buttons, 12px Cards, 4px Inputs, Mint Spark #36f4a4
+   ========================================================================== */
+
+/* --- BOUTONS PILLS (9999px Radius) --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-8);
+  border-radius: var(--radius-pills);
+  font-family: var(--font-family);
+  font-size: var(--text-body);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.01em;
+  padding: 12px 26px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: var(--transition-smooth);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.btn:disabled,
+.btn.disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Bouton Primaire (Blanc plein — Signature Shopify) */
+.btn-primary {
+  background-color: var(--color-pure-white);
+  color: var(--color-midnight-forest);
+  box-shadow: var(--shadow-button);
+}
+
+.btn-primary:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Bouton Ghost (Contour blanc translucide) */
+.btn-ghost {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.28);
+  color: var(--color-pure-white);
+}
+
+.btn-ghost:hover {
+  border-color: var(--color-pure-white);
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-1px);
+}
+
+/* Bouton Accent Menthe (Pour actions clés ou alertes) */
+.btn-mint {
+  background-color: var(--color-shopify-mint);
+  color: var(--color-midnight-forest);
+  font-weight: var(--fw-bold);
+}
+
+.btn-mint:hover {
+  background-color: #55f6b2;
+  box-shadow: var(--glow-mint);
+  transform: translateY(-1px);
+}
+
+/* Tailles de boutons */
+.btn-sm {
+  padding: 8px 18px;
+  font-size: var(--text-body-sm);
+}
+
+.btn-lg {
+  padding: 16px 36px;
+  font-size: 17px;
+}
+
+.btn-icon {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* --- BADGES & TAGS --- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-6);
+  padding: 4px 12px;
+  border-radius: var(--radius-pills);
+  font-size: var(--text-caption);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-caption);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.badge-mint {
+  background-color: rgba(54, 244, 164, 0.12);
+  color: var(--color-shopify-mint);
+  border: 1px solid rgba(54, 244, 164, 0.28);
+}
+
+.badge-white {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-pure-white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge-outline {
+  background-color: transparent;
+  border: 1px solid var(--color-spruce-border);
+  color: var(--color-mist-gray);
+}
+
+.badge-status {
+  padding: 6px 14px;
+  font-size: var(--text-caption);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.02em;
+  text-transform: none;
+  background-color: rgba(6, 26, 28, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--color-spruce-border);
+  color: var(--color-pure-white);
+}
+
+.badge-status::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-shopify-mint);
+  box-shadow: 0 0 8px var(--color-shopify-mint);
+}
+
+/* --- CARTES DE CONTENU (Radius 12px, Hairline Border #1e2c31) --- */
+.card {
+  background-color: var(--surface-card);
+  border: 1px solid var(--color-spruce-border);
+  border-radius: var(--radius-cards);
+  padding: var(--spacing-24);
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.card:hover {
+  border-color: rgba(54, 244, 164, 0.3);
+  box-shadow: var(--shadow-card);
+}
+
+/* Carte Surélevée Showcase (Radius 20px, Vert Sombre #072720) */
+.card-showcase {
+  background-color: var(--surface-elevated);
+  border: 1px solid var(--color-mossy-edge);
+  border-radius: var(--radius-largepanels);
+  padding: var(--spacing-32);
+  box-shadow: var(--shadow-elevated);
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- CARTES PRODUITS (Réutilisables sur Accueil & Catalogue) --- */
+.product-card {
+  background-color: var(--surface-card);
+  border: 1px solid var(--color-spruce-border);
+  border-radius: var(--radius-cards);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(54, 244, 164, 0.35);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.45);
+}
+
+.product-card__media {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Ratio 1:1 parfait */
+  background-color: #0b1416;
+  overflow: hidden;
+}
+
+.product-card__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover .product-card__img {
+  transform: scale(1.05);
+}
+
+.product-card__badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+}
+
+.product-card__content {
+  padding: var(--spacing-20);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-card__category {
+  font-size: var(--text-caption);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caption);
+  color: var(--color-mist-gray);
+  margin-bottom: var(--spacing-6);
+  font-weight: var(--fw-semibold);
+}
+
+.product-card__title {
+  font-size: var(--text-subheading);
+  font-weight: var(--fw-medium);
+  color: var(--color-pure-white);
+  line-height: 1.3;
+  margin-bottom: var(--spacing-8);
+  transition: color 0.2s ease;
+}
+
+.product-card:hover .product-card__title {
+  color: var(--color-shopify-mint);
+}
+
+.product-card__desc {
+  font-size: var(--text-body-sm);
+  color: var(--color-sage-gray);
+  line-height: 1.45;
+  margin-bottom: var(--spacing-16);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-card__footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-12);
+  padding-top: var(--spacing-16);
+  border-top: 1px solid rgba(30, 44, 49, 0.7);
+}
+
+.product-card__price-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card__price {
+  font-size: var(--text-heading-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-pure-white);
+  line-height: 1;
+}
+
+.product-card__old-price {
+  font-size: var(--text-caption);
+  color: var(--color-slate);
+  text-decoration: line-through;
+  margin-top: 4px;
+}
+
+.product-card__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+/* --- FORMULAIRES (Bordures 4px, inputs dark) --- */
+.form-group {
+  margin-bottom: var(--spacing-20);
+}
+
+.form-label {
+  display: block;
+  font-size: var(--text-body-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-pure-white);
+  margin-bottom: var(--spacing-8);
+}
+
+.form-label .required {
+  color: var(--color-shopify-mint);
+  margin-left: 2px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  background-color: var(--surface-card);
+  border: 1px solid var(--color-spruce-border);
+  border-radius: var(--radius-inputs); /* 4px */
+  padding: 12px 16px;
+  color: var(--color-pure-white);
+  font-size: var(--text-body);
+  transition: var(--transition-fast);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-slate);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--color-shopify-mint);
+  outline: none;
+  box-shadow: 0 0 0 1px var(--color-shopify-mint);
+  background-color: #082124;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-helper {
+  font-size: var(--text-caption);
+  color: var(--color-mist-gray);
+  margin-top: var(--spacing-6);
+}
+
+.form-error {
+  font-size: var(--text-caption);
+  color: #ff6b6b;
+  margin-top: var(--spacing-6);
+  display: none;
+}
+
+.form-group.has-error .form-input,
+.form-group.has-error .form-textarea {
+  border-color: #ff6b6b;
+}
+
+.form-group.has-error .form-error {
+  display: block;
+}
+
+/* --- ACCORDÉONS (FAQ) --- */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+}
+
+.accordion-item {
+  background-color: var(--surface-card);
+  border: 1px solid var(--color-spruce-border);
+  border-radius: var(--radius-cards);
+  overflow: hidden;
+  transition: var(--transition-fast);
+}
+
+.accordion-item.is-open {
+  border-color: rgba(54, 244, 164, 0.4);
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  color: var(--color-pure-white);
+  font-size: 17px;
+  font-weight: var(--fw-medium);
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.accordion-trigger:hover {
+  color: var(--color-shopify-mint);
+}
+
+.accordion-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+  stroke: var(--color-sage-gray);
+}
+
+.accordion-item.is-open .accordion-icon {
+  transform: rotate(180deg);
+  stroke: var(--color-shopify-mint);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+  padding: 0 24px;
+}
+
+.accordion-item.is-open .accordion-content {
+  max-height: 1000px;
+  transition: max-height 0.5s ease-in-out;
+  padding-bottom: 24px;
+}
+
+.accordion-content p {
+  color: var(--color-sage-gray);
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* --- TOAST NOTIFICATION (Feedback utilisateur) --- */
+.toast-container {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  background-color: var(--surface-elevated);
+  border: 1px solid var(--color-shopify-mint);
+  color: var(--color-pure-white);
+  padding: 14px 20px;
+  border-radius: var(--radius-cards);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-12);
+  font-size: var(--text-body-sm);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast-icon {
+  color: var(--color-shopify-mint);
+  flex-shrink: 0;
+}
+
+/* --- MODAL DIALOG --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(2, 9, 10, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-20);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-box {
+  background-color: var(--surface-card);
+  border: 1px solid var(--color-spruce-border);
+  border-radius: var(--radius-largepanels);
+  max-width: 560px;
+  width: 100%;
+  padding: var(--spacing-32);
+  box-shadow: var(--shadow-elevated);
+  position: relative;
+  transform: scale(0.95);
+  transition: transform 0.25s ease;
+}
+
+.modal-overlay.is-active .modal-box {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--color-mist-gray);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease;
+}
+
+.modal-close:hover {
+  color: var(--color-pure-white);
+}
