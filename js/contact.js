@@ -85,13 +85,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!isValid) return;
 
-    // Simulate sending
+    // Submission handling (Webhook or Demo simulation)
     const submitBtn = form.querySelector("button[type='submit']");
     const originalText = submitBtn.innerHTML;
     submitBtn.disabled = true;
     submitBtn.innerHTML = `<span>Transmission sécurisée...</span>`;
 
-    setTimeout(() => {
+    const webhookUrl = (typeof SITE_CONFIG !== "undefined" && SITE_CONFIG.forms?.contactWebhookUrl) ? SITE_CONFIG.forms.contactWebhookUrl : "";
+
+    const finishSuccess = () => {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalText;
       form.reset();
@@ -104,13 +106,40 @@ document.addEventListener("DOMContentLoaded", () => {
       if (typeof Toast !== "undefined") {
         Toast.show("Message transmis avec succès", "Notre atelier vous recontacte sous 24h ouvrées.", "success");
       }
-    }, 900);
+    };
+
+    if (webhookUrl) {
+      const formData = new FormData(form);
+      fetch(webhookUrl, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+      })
+      .then(res => {
+        if (res.ok) {
+          finishSuccess();
+        } else {
+          throw new Error("Erreur de transmission");
+        }
+      })
+      .catch(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+        if (typeof Toast !== "undefined") {
+          Toast.show("Erreur d'envoi", "Vérifiez votre webhook ou réessayez.", "warning");
+        }
+      });
+    } else {
+      setTimeout(finishSuccess, 800);
+    }
   });
 
   // Copy Address to clipboard button
   document.querySelectorAll("[data-copy-address]").forEach(btn => {
     btn.addEventListener("click", () => {
-      const address = "18 Rue des Métiers d'Art, 75011 Paris, France";
+      const address = (typeof SITE_CONFIG !== "undefined" && SITE_CONFIG.contact?.address) 
+        ? `${SITE_CONFIG.contact.address.street}, ${SITE_CONFIG.contact.address.city}, ${SITE_CONFIG.contact.address.country}`
+        : "18 Rue des Métiers d'Art, 75011 Paris, France";
       navigator.clipboard.writeText(address).then(() => {
         if (typeof Toast !== "undefined") {
           Toast.show("Adresse copiée dans le presse-papier", address, "info");

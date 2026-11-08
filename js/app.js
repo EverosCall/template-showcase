@@ -239,21 +239,39 @@ const CartManager = {
         this.removeItem(index);
       }
 
-      // Checkout simulation
+      // Checkout handler (Multiple template modes: Stripe, WhatsApp, Email, Demo)
       const checkoutBtn = e.target.closest("#cart-checkout-btn");
       if (checkoutBtn) {
         if (this.items.length === 0) {
           Toast.show("Panier vide", "Ajoutez un article avant de commander", "warning");
           return;
         }
-        Toast.show("Redirection paiement...", "Connexion sécurisée à notre terminal officiel", "success");
-        setTimeout(() => {
-          if (typeof SITE_CONFIG !== "undefined" && SITE_CONFIG.externalChannels?.shopify) {
-            window.open(SITE_CONFIG.externalChannels.shopify, "_blank");
-          } else {
-            alert("Simulation commande : Redirection vers le partenaire de paiement.");
-          }
-        }, 1200);
+
+        const checkoutConfig = (typeof SITE_CONFIG !== "undefined" && SITE_CONFIG.checkout) ? SITE_CONFIG.checkout : {};
+        const mode = checkoutConfig.mode || "demo";
+        const totalFormatted = this.getTotal() + " €";
+
+        if (mode === "stripe" && checkoutConfig.stripePaymentLink) {
+          Toast.show("Redirection Stripe...", "Connexion sécurisée au terminal de paiement", "success");
+          setTimeout(() => {
+            window.open(checkoutConfig.stripePaymentLink, "_blank");
+          }, 900);
+        } else if (mode === "whatsapp" && checkoutConfig.whatsappNumber) {
+          const summary = this.items.map(i => `- ${i.quantity}x ${i.name} (${i.color || "Standard"}) : ${i.price * i.quantity} €`).join("\n");
+          const msg = encodeURIComponent(`Bonjour, je souhaite commander sur votre boutique :\n\n${summary}\n\nTotal : ${totalFormatted}`);
+          const url = `https://wa.me/${checkoutConfig.whatsappNumber.replace(/[^+\d]/g, "")}?text=${msg}`;
+          Toast.show("Ouverture WhatsApp...", "Envoi de votre panier en cours", "success");
+          setTimeout(() => {
+            window.open(url, "_blank");
+          }, 900);
+        } else if (mode === "email" && checkoutConfig.orderEmail) {
+          const summary = this.items.map(i => `- ${i.quantity}x ${i.name} (${i.color || "Standard"}) : ${i.price * i.quantity} €`).join("\n");
+          const subject = encodeURIComponent(`Nouvelle commande (${totalFormatted})`);
+          const body = encodeURIComponent(`Bonjour,\n\nVoici ma sélection de commande :\n\n${summary}\n\nTotal : ${totalFormatted}\n\nMerci de m'indiquer la marche à suivre.`);
+          window.location.href = `mailto:${checkoutConfig.orderEmail}?subject=${subject}&body=${body}`;
+        } else {
+          Toast.show("Commande enregistrée", `Simulation : Total de ${totalFormatted}. Mode démo actif.`, "info");
+        }
       }
     });
 
@@ -510,9 +528,56 @@ const QuickViewManager = {
 };
 
 // ====================================================================
-// 4. GLOBAL EVENT LISTENERS & NAVIGATION
+// 4. TEMPLATE AUTO-HYDRATION (Propagates js/config.js to DOM)
+// ====================================================================
+function hydrateTemplate() {
+  if (typeof SITE_CONFIG === "undefined") return;
+
+  // Texts
+  document.querySelectorAll("[data-template='brand.name']").forEach(el => {
+    if (SITE_CONFIG.brand?.name) el.textContent = SITE_CONFIG.brand.name;
+  });
+  document.querySelectorAll("[data-template='brand.logoText']").forEach(el => {
+    if (SITE_CONFIG.brand?.logoText) el.textContent = SITE_CONFIG.brand.logoText;
+  });
+  document.querySelectorAll("[data-template='brand.logoSubtitle']").forEach(el => {
+    if (SITE_CONFIG.brand?.logoSubtitle) el.textContent = SITE_CONFIG.brand.logoSubtitle;
+  });
+  document.querySelectorAll("[data-template='brand.tagline']").forEach(el => {
+    if (SITE_CONFIG.brand?.tagline) el.textContent = SITE_CONFIG.brand.tagline;
+  });
+  document.querySelectorAll("[data-template='brand.shortDescription']").forEach(el => {
+    if (SITE_CONFIG.brand?.shortDescription) el.textContent = SITE_CONFIG.brand.shortDescription;
+  });
+  document.querySelectorAll("[data-template='contact.email']").forEach(el => {
+    if (SITE_CONFIG.contact?.email) {
+      el.textContent = SITE_CONFIG.contact.email;
+      if (el.tagName === "A") el.href = `mailto:${SITE_CONFIG.contact.email}`;
+    }
+  });
+  document.querySelectorAll("[data-template='contact.phone']").forEach(el => {
+    if (SITE_CONFIG.contact?.phone) {
+      el.textContent = SITE_CONFIG.contact.phone;
+      if (el.tagName === "A") el.href = `tel:${SITE_CONFIG.contact.phone.replace(/[^+\d]/g, "")}`;
+    }
+  });
+  document.querySelectorAll("[data-template='contact.address']").forEach(el => {
+    if (SITE_CONFIG.contact?.address) {
+      el.textContent = `${SITE_CONFIG.contact.address.street}, ${SITE_CONFIG.contact.address.city}`;
+    }
+  });
+  document.querySelectorAll("[data-template='year']").forEach(el => {
+    el.textContent = new Date().getFullYear();
+  });
+}
+
+// ====================================================================
+// 5. GLOBAL EVENT LISTENERS & NAVIGATION
 // ====================================================================
 document.addEventListener("DOMContentLoaded", () => {
+  // Auto-hydrate template values from SITE_CONFIG
+  hydrateTemplate();
+
   // Init Core Engines
   Toast.init();
   CartManager.init();

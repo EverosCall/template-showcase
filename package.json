@@ -1,8 +1,15 @@
 {
-  "name": "site-vitrine",
-  "private": true,
+  "name": "template-showcase",
+  "version": "2.0.0",
+  "description": "Template vitrine & boutique contemporaine haut de gamme clé en main (HTML5 / CSS3 / Vanilla JS)",
+  "author": "EverosCall",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EverosCall/template-showcase.git"
+  },
   "scripts": {
-    "start": "npx --yes serve . -l 3000"
+    "start": "npx --yes serve . -l 3000",
+    "dev": "npx --yes serve . -l 3000"
   }
 }
-

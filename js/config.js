@@ -1,229 +1,201 @@
 /**
  * ====================================================================
- * CONFIGURATION CENTRALE DU SITE VITRINE (CONFIG.JS)
+ * TEMPLATE SHOWCASE — CONFIGURATION CENTRALE (JS/CONFIG.JS)
  * ====================================================================
  * 
- * 💡 GUIDE DÉBUTANT :
- * Vous pouvez personnaliser tout votre site ici en quelques minutes !
- * Modifiez simplement les textes entre guillemets "..." ci-dessous.
+ * 💡 GUIDE RAPIDE DU TEMPLATE :
+ * Ce fichier est le tableau de bord unique pour personnaliser tout votre site !
+ * Modifiez les valeurs ci-dessous : elles se propagent automatiquement
+ * sur l'ensemble des 8 pages (Header, Logo, Coordonnées, Footer, Panier).
  * 
- * SOMMAIRE RAPIDE :
- * 1. INFORMATIONS DE CONTACT (Email, Téléphone, Adresse, Horaires)
- * 2. IDENTITÉ DE LA MARQUE & TITRES (Nom, Slogan, Description)
- * 3. IMAGES & LOGOS DU SITE (Logo, Favicon, Bannière)
- * 4. BOUTONS & LIENS D'ACHAT EXTERNES (Shopify, Amazon, Etsy...)
- * 5. TEXTES DU MENU DE NAVIGATION (Liens propres sans .html)
- * 6. TRADUCTIONS FR / EN (Français & Anglais)
+ * SOMMAIRE :
+ * 1. IDENTITÉ DE MARQUE (Nom, Logos, Slogan, Devise)
+ * 2. COORDONNÉES DE CONTACT (Email, Téléphone, Adresse, Horaires)
+ * 3. SYSTÈME DE COMMANDE & CHECKOUT (Stripe, WhatsApp, Email, Démo)
+ * 4. FORMULAIRES & WEBHOOKS (Formspree, Basin, Resend, Make)
+ * 5. CANAUX DE VENTE & RÉSEAUX SOCIAUX (Shopify, Amazon, Instagram...)
+ * 6. ÉLÉMENTS DE RÉASSURANCE & GARANTIES
+ * 7. MENU DE NAVIGATION
  * ====================================================================
  */
 
 const SITE_CONFIG = {
 
   /* ====================================================================
-   * 1. INFORMATIONS DE CONTACT
+   * 1. IDENTITÉ DE MARQUE
    * ====================================================================
-   * Modifiez ici vos coordonnées officielles. Elles s'affichent
-   * automatiquement sur la page de contact et dans le pied de page.
-   */
-  contact: {
-    // CONTACT : Votre adresse email de contact
-    email: "bonjour@atelier-krona.fr",
-
-    // CONTACT : Votre numéro de téléphone
-    phone: "+33 (0)1 84 72 90 15",
-
-    // CONTACT : Adresse physique ou atelier
-    address: {
-      street: "18 Rue des Métiers d'Art",
-      city: "75011 Paris",
-      country: "France",
-      coordinates: "48.8566, 2.3522" // Coordonnées GPS (optionnel)
-    },
-
-    // CONTACT : Horaires d'ouverture
-    hours: [
-      { days: "Lundi — Vendredi", time: "09h30 - 18h30" },
-      { days: "Samedi (Sur rendez-vous)", time: "10h00 - 16h00" },
-      { days: "Dimanche", time: "Fermé" }
-    ],
-
-    // CONTACT : Délai de réponse annoncé aux clients
-    responseDelayNotice: "Notre équipe vous répond sous 24 à 48 heures ouvrées."
-  },
-
-
-  /* ====================================================================
-   * 2. IDENTITÉ DE LA MARQUE & TITRES DU SITE
-   * ====================================================================
-   * Modifiez ici le nom de votre marque, le slogan et la description.
    */
   brand: {
-    // TITRE : Nom principal de votre marque
+    // Nom officiel de la marque / entreprise
     name: "ATELIER KRONA",
 
-    // TITRE : Slogan de la marque
+    // Texte principal affiché dans le logo (ex: "KRONA")
+    logoText: "KRONA",
+
+    // Sous-titre du logo (ex: "STUDIO & ATELIER")
+    logoSubtitle: "STUDIO & ATELIER",
+
+    // Slogan de la marque
     tagline: "Design intemporel, matières brutes & finitions d'exception",
 
-    // TEXTE : Courte description de l'entreprise
-    shortDescription: "Créateur d'objets du quotidien et pièces d'artisanat contemporain. Découvrez notre collection et commandez auprès de nos points de vente officiels.",
+    // Courte description pour le pied de page et les métadonnées SEO
+    shortDescription: "Atelier d'ébénisterie d'art et créateur de mobilier architectural d'exception. Conception raisonnée et production numérotée à Paris.",
 
     // Année de fondation
     foundedYear: 2021,
 
-    // Emplacement géographique
-    location: "Paris — Copenhague",
+    // Emplacement géographique résumé
+    location: "Paris — Bastille",
 
-    // TITRE DU LOGO : Texte affiché dans le logo si aucune image n'est utilisée
-    logoText: "KRONA",
-    logoSubtitle: "STUDIO & ATELIER",
-
-    // Devise monétaire utilisée sur le site
+    // Symbole monétaire utilisé dans toute l'interface
     currency: "€",
     currencyPosition: "after" // "after" (ex: 450 €) ou "before" (ex: € 450)
   },
 
 
   /* ====================================================================
-   * 3. IMAGES & BANNIÈRES DU SITE
+   * 2. COORDONNÉES DE CONTACT & SHOWROOM
    * ====================================================================
-   * Modifiez ici la bannière d'annonce supérieure et les visuels clés.
    */
-  announcement: {
-    enabled: true, // Mettez "false" pour masquer la bannière supérieure
+  contact: {
+    // Adresse email principale de contact
+    email: "contact@atelier-krona.fr",
 
-    // TEXTE : Message de la barre d'annonce
-    text: "✨ Nouvelle collection en édition limitée disponible auprès de nos revendeurs certifiés.",
+    // Numéro de téléphone (affiché et cliquable au format tel:)
+    phone: "+33 (0)1 84 72 90 15",
 
-    // BADGE : Petit badge à gauche du message
-    badge: "NOUVEAUTÉ",
+    // Adresse physique du showroom ou de l'atelier
+    address: {
+      street: "18 Rue des Métiers d'Art",
+      city: "75011 Paris",
+      country: "France",
+      coordinates: "48.8566, 2.3522" // Latitude, Longitude GPS
+    },
 
-    // BOUTON / LIEN : Texte et destination du lien de la bannière
-    linkText: "Explorer le catalogue →",
-    linkUrl: "produits"
+    // Horaires d'ouverture
+    hours: [
+      { days: "Lundi — Vendredi", time: "09h30 - 18h30" },
+      { days: "Samedi (Sur rendez-vous)", time: "10h00 - 16h00" },
+      { days: "Dimanche", time: "Fermé" }
+    ],
+
+    // Délai de réponse annoncé
+    responseDelayNotice: "Notre bureau d'études vous répond sous 24 à 48 heures ouvrées."
   },
 
 
   /* ====================================================================
-   * 4. BOUTONS & LIENS D'ACHAT EXTERNES
+   * 3. SYSTÈME DE COMMANDE & CHECKOUT DU PANIER
    * ====================================================================
-   * Modifiez ici les liens vers vos canaux d'achat officiels :
-   * Shopify, Amazon, Etsy, points de vente physiques, etc.
+   * Choisissez le mode d'encaissement qui correspond à votre activité :
+   * - "stripe"   : Redirige vers votre lien Stripe Payment Link officiel.
+   * - "whatsapp" : Ouvre WhatsApp avec le récapitulatif complet des articles.
+   * - "email"    : Ouvre un mailto: pré-rempli avec la commande.
+   * - "demo"     : Affiche une notification de confirmation interactive.
+   */
+  checkout: {
+    mode: "stripe", // "stripe" | "whatsapp" | "email" | "demo"
+
+    // Lien de paiement Stripe (Ex: "https://buy.stripe.com/...")
+    stripePaymentLink: "https://buy.stripe.com/demo",
+
+    // Numéro WhatsApp international pour recevoir les commandes (sans espaces ni tirets)
+    whatsappNumber: "+33184729015",
+
+    // Adresse email pour recevoir les bons de commande
+    orderEmail: "commandes@atelier-krona.fr",
+
+    // Seuil de gratuité des frais de port (en euros)
+    freeShippingThreshold: 150,
+
+    // Code promo actif dans le panier (ex: KRONA10 pour -10%)
+    promoCodes: {
+      "KRONA10": { discountPercent: 10, label: "Remise d'inauguration (-10%)" },
+      "PRIVILEGE": { discountPercent: 15, label: "Remise Club Privilège (-15%)" }
+    }
+  },
+
+
+  /* ====================================================================
+   * 4. FORMULAIRES & WEBHOOKS (CONTACT & SHOWROOM)
+   * ====================================================================
+   * Pour recevoir les messages du formulaire de contact directement par email,
+   * collez simplement l'URL de votre endpoint (Formspree, Basin, Make, Zapier...).
+   * Laissez vide "" pour activer la simulation interactive locale.
+   */
+  forms: {
+    contactWebhookUrl: "" // Ex: "https://formspree.io/f/mon_id"
+  },
+
+
+  /* ====================================================================
+   * 5. CANAUX DE VENTE EXTERNES & RÉSEAUX SOCIAUX
+   * ====================================================================
    */
   externalChannels: [
     {
       id: "official-store",
-      name: "Boutique Officielle Shopify",
-      description: "Livraison rapide & catalogue complet",
-      url: "https://shopify.com", // LIEN : Remplacez par le lien de votre boutique
-      badge: "Recommandé"
+      name: "Boutique Officielle",
+      description: "Livraison blanche & certificat d'authenticité",
+      url: "produits",
+      badge: "Direct Atelier"
     },
     {
-      id: "amazon",
-      name: "Boutique Officielle Amazon",
-      description: "Livraison Prime 24h & avis vérifiés",
-      url: "https://amazon.fr", // LIEN : Remplacez par votre lien Amazon
-      badge: "Prime"
-    },
-    {
-      id: "etsy",
-      name: "Atelier Artisanal Etsy",
-      description: "Pièces uniques & créations sur-mesure",
-      url: "https://etsy.com", // LIEN : Remplacez par votre lien Etsy
-      badge: "Artisans"
-    },
-    {
-      id: "retailers",
-      name: "Réseau de concept stores",
-      description: "Plus de 45 points de vente en Europe",
-      url: "contact#points-de-vente", // LIEN vers vos revendeurs
-      badge: "Physique"
+      id: "prescripteurs",
+      name: "Espace Prescription B2B",
+      description: "Pour architectes d'intérieur & hôtellerie",
+      url: "services",
+      badge: "Professionnels"
     }
   ],
 
-  // Réseaux sociaux
   socials: [
     { name: "Instagram", url: "https://instagram.com", handle: "@atelier.krona" },
     { name: "Pinterest", url: "https://pinterest.com", handle: "atelier_krona" },
-    { name: "LinkedIn", url: "https://linkedin.com", handle: "atelier-krona" },
-    { name: "YouTube", url: "https://youtube.com", handle: "Atelier Krona" }
+    { name: "LinkedIn", url: "https://linkedin.com", handle: "atelier-krona" }
   ],
 
-  // Éléments de rassurance (Garanties affichées sur l'accueil)
+
+  /* ====================================================================
+   * 6. ÉLÉMENTS DE RÉASSURANCE & GARANTIES
+   * ====================================================================
+   */
   guarantees: [
     {
-      title: "Matériaux Nobles",
-      description: "Bois certifiés FSC, acier brossé et céramiques façonnées à la main."
+      title: "Garantie 5 Ans",
+      description: "Structure et mécanismes garantis, réparabilité garantie à vie."
     },
     {
-      title: "Garantie 5 à 10 Ans",
-      description: "Toutes nos pièces sont conçues pour durer et réparables à vie."
+      title: "Livraison Blanche",
+      description: "Transport spécialisé sur rendez-vous avec déballage inclus."
     },
     {
-      title: "Expédition Sécurisée",
-      description: "Achat sécurisé auprès de nos plateformes partenaires certifiées."
+      title: "Certificat Signé",
+      description: "Chaque création porte un numéro unique gravé au laser."
     },
     {
-      title: "Éditions Numérotées",
-      description: "Certificat d'authenticité signé fourni avec chaque objet."
+      title: "Finitions Sur-Mesure",
+      description: "Plus de 40 combinaisons de teintes et matières disponibles."
     }
   ],
 
 
   /* ====================================================================
-   * 5. TEXTES DU MENU DE NAVIGATION (URLS PROPRES)
+   * 7. MENU DE NAVIGATION
    * ====================================================================
-   * Liens du menu principal. Remarquez l'absence de ".html" !
    */
   navigation: [
     { label: "Accueil", href: "./" },
     { label: "Catalogue", href: "produits" },
-    { label: "À Propos", href: "about" },
-    { label: "Services", href: "services" },
-    { label: "Tarifs & Packs", href: "tarifs" },
+    { label: "La Maison", href: "about" },
+    { label: "Sur-Mesure", href: "services" },
+    { label: "Formules", href: "tarifs" },
     { label: "FAQ", href: "faq" },
-    { label: "Contact", href: "contact" }
-  ],
-
-
-  /* ====================================================================
-   * 6. TRADUCTIONS FR / EN (Textes du site en Français et Anglais)
-   * ====================================================================
-   * Le site utilise Google Translate pour traduire automatiquement l'ensemble
-   * des pages. Vous pouvez également retrouver ici les termes clés du site.
-   */
-  translations: {
-    fr: {
-      navHome: "Accueil",
-      navCatalog: "Catalogue",
-      navAbout: "À Propos",
-      navServices: "Services",
-      navPricing: "Tarifs & Packs",
-      navFaq: "FAQ",
-      navContact: "Contact",
-      btnViewProducts: "Voir les Produits",
-      btnContactUs: "Nous Contacter",
-      btnOrder: "Commander",
-      btnDetails: "Fiche",
-      langSwitch: "FR / EN"
-    },
-    en: {
-      navHome: "Home",
-      navCatalog: "Catalog",
-      navAbout: "About Us",
-      navServices: "Services",
-      navPricing: "Pricing & Packs",
-      navFaq: "FAQ",
-      navContact: "Contact",
-      btnViewProducts: "View Products",
-      btnContactUs: "Contact Us",
-      btnOrder: "Buy Now",
-      btnDetails: "Details",
-      langSwitch: "EN / FR"
-    }
-  }
+    { label: "Showroom", href: "contact" }
+  ]
 };
 
-// Exportation globale pour les scripts
+// Exportation globale
 if (typeof window !== "undefined") {
   window.SITE_CONFIG = SITE_CONFIG;
 }

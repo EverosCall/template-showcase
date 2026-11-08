@@ -1,0 +1,20 @@
+# ====================================================================
+# TEMPLATE SHOWCASE — REWRITE RULES FOR CLEAN URLS (APACHE)
+# ====================================================================
+
+RewriteEngine On
+
+# Si le fichier existe directement, le servir
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Servir .html si la ressource sans extension existe
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# Sécurité : masquer les fichiers sensibles
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
