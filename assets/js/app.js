@@ -650,17 +650,4 @@ document.addEventListener("DOMContentLoaded", () => {
       sessionStorage.setItem("krona_announce_closed", "true");
     });
   }
-
-  // Language Switcher (FR / EN toggle)
-  const langToggle = document.getElementById("lang-toggle-btn");
-  if (langToggle) {
-    let currentLang = localStorage.getItem("krona_lang") || "fr";
-    langToggle.addEventListener("click", () => {
-      currentLang = currentLang === "fr" ? "en" : "fr";
-      localStorage.setItem("krona_lang", currentLang);
-      Toast.show("Langue", currentLang === "fr" ? "Version Française activée" : "English version activated", "info");
-      const langText = langToggle.querySelector(".lang-text");
-      if (langText) langText.textContent = currentLang.toUpperCase();
-    });
-  }
 });

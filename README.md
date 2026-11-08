@@ -3,7 +3,7 @@
 [![HTML5](https://img.shields.io/badge/HTML5-Sémantique-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-3--Tier_Tokens-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/Vanilla_JS-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
-[![Audit](https://img.shields.io/badge/Impeccable_Audit-0_Warning-36f4a4?style=for-the-badge)](file:///css/theme.css)
+[![Audit](https://img.shields.io/badge/Impeccable_Audit-0_Warning-36f4a4?style=for-the-badge)](file:///assets/css/theme.css)
 [![Dependencies](https://img.shields.io/badge/Dependencies-0_Zero_Bloat-brightgreen?style=for-the-badge)](package.json)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
@@ -13,8 +13,8 @@ Un template vitrine & e-commerce de prestige, ultra-performant et clé en main. 
 
 ## ⚡ En Bref : Pourquoi ce Template ?
 
-- **Zéro dépendance, zéro compilation** : Pas de `npm run build` complexe, pas de framework obscur. Double-cliquez sur `index.html` et le site tourne à 100% directement dans votre navigateur.
-- **Personnalisation en 60 secondes** : Un seul fichier [`js/config.js`](file:///C:/Users/Admin/Downloads/projet_other/js/config.js) pilote le nom de marque, le logo, les coordonnées, les devises, les liens sociaux et le mode de commande grâce à l'auto-hydratation (`data-template`).
+- **Zéro dépendance, zéro compilation** : Pas de `npm run build` complexe, pas de framework lourd. Double-cliquez sur `index.html` et le site fonctionne à 100% directement dans votre navigateur.
+- **Personnalisation en 60 secondes** : Un seul fichier [`assets/js/config.js`](file:///C:/Users/Admin/Downloads/projet_other/assets/js/config.js) pilote le nom de marque, le logo, les coordonnées, les devises, les liens sociaux et le mode de commande grâce à l'auto-hydratation (`data-template`).
 - **Fonctionnalités e-commerce natives** :
   - 🛒 **Panier tiroir latéral** (`CartManager`) persistant dans `localStorage`, avec code promo (`KRONA10`), jauge de livraison offerte et ajustement de quantités.
   - 💳 **Checkout multicanal** : Compatible **Stripe Checkout** (lien de paiement direct), **WhatsApp Order** (envoi du récapitulatif formaté), **Email Order** (`mailto:`) ou mode **Démo**.
@@ -46,15 +46,15 @@ npm start
 Ce template est statique pur : il peut être hébergé gratuitement en quelques secondes sur :
 - **Vercel** : Glissez-déposez le dossier ou connectez votre dépôt GitHub.
 - **Cloudflare Pages** : Déploiement instantané avec CDN mondial.
-- **GitHub Pages** : Activez GitHub Pages dans les paramètres du dépôt (`Settings` > `Pages` > `Deploy from a branch: master / root`).
-- **Netlify** : Compatible direct (le fichier `_redirects` pour les URLs propres sans `.html` est déjà inclus).
+- **GitHub Pages** : Activez GitHub Pages dans les paramètres du dépôt (`Settings` > `Pages` > `Deploy from a branch: main / root`).
+- **Netlify** : Compatible direct (le fichier `_redirects` pour les URLs propres sans `.html` est inclus).
 
 ---
 
 ## 🛠️ Guide de Personnalisation du Template
 
-### 1. Personnaliser la marque & le contact (`js/config.js`)
-Ouvrez [`js/config.js`](file:///C:/Users/Admin/Downloads/projet_other/js/config.js) pour modifier :
+### 1. Personnaliser la marque & le contact (`assets/js/config.js`)
+Ouvrez [`assets/js/config.js`](file:///C:/Users/Admin/Downloads/projet_other/assets/js/config.js) pour modifier :
 ```javascript
 const SITE_CONFIG = {
   brand: {
@@ -86,8 +86,8 @@ const SITE_CONFIG = {
 ```
 > 💡 Grâce au moteur d'auto-hydratation, **toutes les pages HTML mettent à jour leurs logos, pieds de page et mentions de copyright automatiquement**.
 
-### 2. Personnaliser le catalogue de produits (`js/products.js`)
-Ouvrez [`js/products.js`](file:///C:/Users/Admin/Downloads/projet_other/js/products.js) :
+### 2. Personnaliser le catalogue de produits (`assets/js/products.js`)
+Ouvrez [`assets/js/products.js`](file:///C:/Users/Admin/Downloads/projet_other/assets/js/products.js) :
 ```javascript
 {
   id: "mon-produit-01",
@@ -101,8 +101,8 @@ Ouvrez [`js/products.js`](file:///C:/Users/Admin/Downloads/projet_other/js/produ
 }
 ```
 
-### 3. Personnaliser les couleurs & le thème (`css/theme.css`)
-Pour adapter l'ambiance visuelle à votre charte graphique, modifiez simplement les variables CSS dans [`css/theme.css`](file:///C:/Users/Admin/Downloads/projet_other/css/theme.css) :
+### 3. Personnaliser les couleurs & le thème (`assets/css/theme.css`)
+Pour adapter l'ambiance visuelle à votre charte graphique, modifiez simplement les variables CSS dans [`assets/css/theme.css`](file:///C:/Users/Admin/Downloads/projet_other/assets/css/theme.css) :
 ```css
 :root {
   /* Couleur d'accent principale */
@@ -116,40 +116,46 @@ Pour adapter l'ambiance visuelle à votre charte graphique, modifiez simplement 
 
 ---
 
-## 📂 Structure du Répertoire
+## 📂 Structure Professionnelle du Répertoire
 
 ```text
 template-showcase/
-├── index.html            # Page d'accueil (Hero, Spotlight, Bento collections, Avis)
-├── produits.html         # Catalogue dynamique avec filtres & recherche
-├── produit.html          # Fiche produit détaillée avec galerie & sélecteur
-├── about.html            # Histoire, manifeste & valeurs d'atelier
-├── services.html         # Sur-Mesure, prescription B2B & processus de fabrication
-├── tarifs.html           # Ensembles harmonisés & packs remisés
-├── faq.html              # Foire aux questions interactive
-├── contact.html          # Showroom, formulaire validé & copie d'adresse 1-clic
+├── docs/                      # Documentation claire et isolée
+│   └── GUIDE_DEBUTANT.md      # Guide pratique pas-à-pas pour les débutants
 │
-├── css/
-│   ├── theme.css         # Tokens 3-tier, typographie, couleurs & reset
-│   ├── components.css    # Boutons, panier slide-over, modale, badges, toasts
-│   ├── layout.css        # En-tête fixe, tiroir mobile, pied de page
-│   └── pages.css         # Styles spécifiques aux sections et grilles
+├── assets/                    # Ressources statiques regroupées
+│   ├── css/
+│   │   ├── theme.css          # Tokens 3-tier, typographie, couleurs & reset
+│   │   ├── components.css     # Boutons, panier slide-over, modale, badges, toasts
+│   │   ├── layout.css         # En-tête fixe, tiroir mobile, pied de page
+│   │   └── pages.css          # Styles spécifiques aux sections et grilles
+│   │
+│   └── js/
+│       ├── config.js          # Configuration centrale & options de paiement
+│       ├── products.js        # Base de données du catalogue & spécifications
+│       ├── app.js             # Moteur central (Hydratation, CartManager, Modale, Toast)
+│       ├── catalog.js         # Recherche temps réel & filtres dynamiques
+│       ├── product-detail.js  # Galerie interactive, swatches & recalcul de prix
+│       ├── faq.js             # Recherche et accordéons FAQ
+│       └── contact.js         # Validation en direct et webhook email
 │
-├── js/
-│   ├── config.js         # Configuration centrale & options de paiement
-│   ├── products.js       # Base de données du catalogue & spécifications
-│   ├── app.js            # Moteur central (Hydratation, CartManager, Modale, Toast)
-│   ├── catalog.js        # Recherche temps réel & filtres dynamiques
-│   ├── product-detail.js # Galerie interactive, swatches & recalcul de prix
-│   ├── faq.js            # Recherche et accordéons FAQ
-│   └── contact.js        # Validation en direct et webhook email
+├── index.html                 # Page d'accueil (Hero, Spotlight, Bento collections, Avis)
+├── produits.html              # Catalogue dynamique avec filtres & recherche
+├── produit.html               # Fiche produit détaillée avec galerie & sélecteur
+├── about.html                 # Histoire, manifeste & valeurs d'atelier
+├── services.html              # Sur-Mesure, prescription B2B & processus de fabrication
+├── tarifs.html                # Ensembles harmonisés & packs remisés
+├── faq.html                   # Foire aux questions interactive
+├── contact.html               # Showroom, formulaire validé & copie d'adresse 1-clic
 │
-├── GUIDE_DEBUTANT.md     # Guide pas-à-pas illustré pour débutants sans code
-├── package.json          # Configuration projet & scripts légers
-├── vercel.json           # Configuration URLs propres Vercel
-├── serve.json            # Configuration serveur local
-├── _redirects           # Règles de redirection Cloudflare / Netlify
-└── README.md             # Documentation officielle
+├── package.json               # Configuration projet & scripts légers
+├── vercel.json                # Configuration URLs propres Vercel
+├── serve.json                 # Configuration serveur local
+├── _redirects                # Règles de redirection Cloudflare / Netlify
+├── .htaccess                  # Règles de réécriture pour serveurs Apache / OVH
+├── .gitignore                 # Exclusion des fichiers temporaires et système
+├── LICENSE                    # Licence MIT
+└── README.md                  # Documentation officielle
 ```
 
 ---
@@ -165,5 +171,3 @@ template-showcase/
 ## 📄 Licence
 
 Ce projet est distribué sous licence **MIT**. Vous êtes libre de l'utiliser, de le modifier et de le déployer pour vos projets personnels ou commerciaux.
-
-*Conçu avec exigence pour sublimer les marques de prestige contemporaines.*
