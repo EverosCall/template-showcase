@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détails de la Pièce — ATELIER KRONA</title>
+  <meta name="description" content="Découvrez les caractéristiques techniques, dimensions, finitions et options de commande de cette pièce d'exception.">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2336f4a4'><circle cx='12' cy='12' r='9'/></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- Ambient Mesh Background -->
+  <div class="ambient-mesh" aria-hidden="true"></div>
+
+  <!-- Announcement Bar -->
+  <aside class="announcement-bar" role="region" aria-label="Canal officiel">
+    <span class="badge badge-mint">GARANTIE ATELIER</span>
+    <span>Chaque pièce est accompagnée de son certificat d'authenticité et d'une garantie structurelle de 5 ans.</span>
+    <button type="button" class="announcement-close" aria-label="Fermer l'annonce">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </aside>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-container" aria-label="Navigation principale">
+        
+        <a href="./" class="site-logo" aria-label="Retour à l'accueil Atelier Krona">
+          <span class="site-logo__title">KRONA</span>
+          <span class="site-logo__sub">STUDIO & ATELIER</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="./" class="nav-link">Accueil</a></li>
+          <li><a href="produits" class="nav-link active">Catalogue</a></li>
+          <li><a href="about" class="nav-link">La Maison</a></li>
+          <li><a href="services" class="nav-link">Sur-Mesure</a></li>
+          <li><a href="tarifs" class="nav-link">Formules</a></li>
+          <li><a href="faq" class="nav-link">FAQ</a></li>
+          <li><a href="contact" class="nav-link">Showroom</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button type="button" class="lang-toggle-btn" id="lang-toggle-btn" aria-label="Changer de langue">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <span class="lang-text">FR</span>
+          </button>
+
+          <a href="produits" class="nav-action-btn" title="Recherche catalogue" aria-label="Recherche">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </a>
+
+          <button type="button" class="nav-action-btn open-cart-trigger" title="Ouvrir le panier" aria-label="Panier d'achats">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            <span class="cart-badge-count" style="display: none;">0</span>
+          </button>
+
+          <button type="button" class="nav-action-btn mobile-toggle" aria-label="Ouvrir le menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav" role="dialog" aria-modal="true" aria-label="Menu mobile">
+    <div class="mobile-nav__header">
+      <a href="./" class="site-logo">
+        <span class="site-logo__title">KRONA</span>
+        <span class="site-logo__sub">STUDIO & ATELIER</span>
+      </a>
+      <button type="button" class="nav-action-btn mobile-nav-close" aria-label="Fermer le menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <ul class="mobile-nav__links">
+      <li><a href="./" class="mobile-nav__link">Accueil</a></li>
+      <li><a href="produits" class="mobile-nav__link active">Catalogue</a></li>
+      <li><a href="about" class="mobile-nav__link">La Maison</a></li>
+      <li><a href="services" class="mobile-nav__link">Sur-Mesure</a></li>
+      <li><a href="tarifs" class="mobile-nav__link">Formules</a></li>
+      <li><a href="faq" class="mobile-nav__link">FAQ</a></li>
+      <li><a href="contact" class="mobile-nav__link">Showroom & Contact</a></li>
+    </ul>
+
+    <div class="mobile-nav__footer">
+      <button type="button" class="btn btn-primary btn-full open-cart-trigger">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        Voir mon panier
+      </button>
+    </div>
+  </div>
+
+  <main class="section">
+    <div class="container">
+      
+      <!-- Breadcrumb Navigation -->
+      <nav aria-label="Fil d'Ariane" style="margin-bottom: var(--space-8); font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+        <a href="./" style="color: var(--text-secondary);">Accueil</a>
+        <span>/</span>
+        <a href="produits" id="breadcrumb-category" style="color: var(--text-secondary);">Catalogue</a>
+        <span>/</span>
+        <span id="breadcrumb-product" style="color: var(--primitive-white); font-weight: 600;">Chargement...</span>
+      </nav>
+
+      <!-- Dynamic Product Detail Container -->
+      <div id="product-detail-view">
+        <!-- Rendered by js/product-detail.js -->
+        <div style="text-align: center; padding: 100px 0; color: var(--text-muted);">
+          Chargement des détails de la pièce...
+        </div>
+      </div>
+
+      <!-- Related Creations Section -->
+      <section style="margin-top: var(--space-24); padding-top: var(--space-16); border-top: 1px solid var(--border-subtle);">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: var(--space-8); flex-wrap: wrap; gap: 12px;">
+          <div>
+            <span class="section-kicker">Harmonie & Ensemble</span>
+            <h2 class="section-title" style="margin-bottom: 0;">Créations assorties</h2>
+          </div>
+          <a href="produits" class="btn btn-outline-mint btn-sm">Explorer toute la collection →</a>
+        </div>
+
+        <div class="product-grid" id="related-products-grid">
+          <!-- Rendered by js/product-detail.js -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Full Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-trust-strip">
+        <div class="trust-badge-item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div>
+            <h5>Garantie 5 Ans</h5>
+            <p>Structure & finitions couvertes</p>
+          </div>
+        </div>
+        <div class="trust-badge-item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+          <div>
+            <h5>Livraison Blanche</h5>
+            <p>Expédition renforcée avec suivi</p>
+          </div>
+        </div>
+        <div class="trust-badge-item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+          <div>
+            <h5>Retour 30 Jours</h5>
+            <p>Sérénité & essai sans engagement</p>
+          </div>
+        </div>
+        <div class="trust-badge-item">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <div>
+            <h5>Showroom Paris</h5>
+            <p>18 Rue des Métiers d'Art, 75011</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="./" class="site-logo">
+            <span class="site-logo__title">KRONA</span>
+            <span class="site-logo__sub">STUDIO & ATELIER</span>
+          </a>
+          <p>
+            Manufacture contemporaine de mobilier, luminaires et objets acoustiques de précision. Fondée à Paris en 2021.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col__title">Créations</div>
+          <ul class="footer-links">
+            <li><a href="produits?cat=luminaire">Luminaires</a></li>
+            <li><a href="produits?cat=mobilier">Mobilier & Assises</a></li>
+            <li><a href="produits?cat=audio">Audio Hi-Fi</a></li>
+            <li><a href="produits?cat=accessoires">Accessoires Bureau</a></li>
+            <li><a href="produits">Tout le Catalogue</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col__title">La Maison</div>
+          <ul class="footer-links">
+            <li><a href="about">Histoire de l'Atelier</a></li>
+            <li><a href="services">Sur-Mesure & B2B</a></li>
+            <li><a href="tarifs">Formules & Packs</a></li>
+            <li><a href="contact">Prendre Rendez-vous</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col__title">Assistance</div>
+          <ul class="footer-links">
+            <li><a href="faq">Questions Fréquentes</a></li>
+            <li><a href="contact">Contact & SAV</a></li>
+            <li><a href="faq">Guide des Finitions</a></li>
+            <li><a href="faq">Suivi d'Expédition</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col__title">Atelier & Showroom</div>
+          <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px;">
+            18 Rue des Métiers d'Art<br>
+            75011 Paris — France<br>
+            Du Lundi au Samedi sur rendez-vous.
+          </p>
+          <a href="contact" class="btn btn-outline-mint btn-sm">Venir à l'Atelier →</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2021—2026 Atelier Krona S.A.S. Tous droits réservés. Façonné avec passion en Europe.
+        </div>
+        <div class="footer-payment-icons">
+          <span>APPLE PAY</span> • <span>VISA</span> • <span>MASTERCARD</span> • <span>KLARNA</span> • <span>AMEX</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/product-detail.js"></script>
+</body>
+</html>

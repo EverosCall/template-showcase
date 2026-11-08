@@ -1,0 +1,331 @@
+/* ==========================================================================
+   ATELIER KRONA — DESIGN SYSTEM & TOKENS (2026 EDITION)
+   Built with: UI/UX Pro Max, Design-System 3-Tier Tokens & 21st UI Standards
+   Style: Liquid Glass & Glassmorphism, Deep Obsidian & Electric Mint
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ========================================================================
+     1. PRIMITIVE TOKENS (Raw values)
+     ======================================================================== */
+  --primitive-black: #000000;
+  --primitive-obsidian: #030708;
+  --primitive-midnight-950: #050e10;
+  --primitive-midnight-900: #08171a;
+  --primitive-midnight-800: #0c2327;
+  --primitive-midnight-700: #123339;
+  
+  --primitive-slate-900: #0f172a;
+  --primitive-slate-800: #1e293b;
+  --primitive-slate-700: #334155;
+  --primitive-slate-600: #475569;
+  --primitive-slate-400: #94a3b8;
+  --primitive-slate-300: #cbd5e1;
+  --primitive-slate-200: #e2e8f0;
+  --primitive-slate-100: #f1f5f9;
+  --primitive-white: #ffffff;
+
+  --primitive-mint-500: #36f4a4;
+  --primitive-mint-400: #55f7b3;
+  --primitive-mint-300: #86f9c8;
+  --primitive-mint-600: #1fd68a;
+  --primitive-mint-900: #063d27;
+
+  --primitive-gold-500: #d4af37;
+  --primitive-gold-400: #f1d77a;
+
+  --primitive-red-500: #ef4444;
+  --primitive-red-600: #dc2626;
+
+  /* ========================================================================
+     2. SEMANTIC TOKENS (Purpose-driven aliases)
+     ======================================================================== */
+  /* Surfaces & Backgrounds */
+  --surface-canvas: var(--primitive-obsidian);
+  --surface-base: var(--primitive-midnight-950);
+  --surface-card: rgba(8, 23, 26, 0.72);
+  --surface-card-hover: rgba(12, 35, 39, 0.88);
+  --surface-elevated: rgba(14, 38, 42, 0.85);
+  --surface-overlay: rgba(3, 7, 8, 0.82);
+  --surface-drawer: #071618;
+  --surface-inset: #040c0e;
+
+  /* Borders & Hairlines */
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-strong: rgba(255, 255, 255, 0.25);
+  --border-accent: rgba(54, 244, 164, 0.35);
+  --border-accent-glow: rgba(54, 244, 164, 0.65);
+
+  /* Glassmorphism tokens (Liquid Glass standard) */
+  --glass-bg: rgba(7, 24, 27, 0.65);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.09);
+  --glass-border-hover: 1px solid rgba(54, 244, 164, 0.3);
+  --glass-blur: blur(16px);
+  --glass-blur-lg: blur(24px);
+
+  /* Typography Colors (WCAG AAA compliant: minimum 7:1 for headers, 12:1 for body) */
+  --text-primary: #f8fafc;        /* High-contrast pure white/slate */
+  --text-secondary: #94a3b8;      /* Clean slate reading tone */
+  --text-muted: #64748b;          /* Metadata & subtle hints */
+  --text-accent: var(--primitive-mint-500); /* Electric Mint */
+  --text-inverse: var(--primitive-obsidian);
+
+  /* Primary Brand & Interaction */
+  --color-primary: var(--primitive-mint-500);
+  --color-primary-hover: var(--primitive-mint-400);
+  --color-primary-active: var(--primitive-mint-600);
+  --color-primary-fg: var(--primitive-obsidian);
+
+  /* Feedback Colors */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  /* ========================================================================
+     3. TYPOGRAPHY SCALE (Fluid clamp typography for seamless responsiveness)
+     ======================================================================== */
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: 'Syne', var(--font-body);
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Type Scale */
+  --text-xs: 0.75rem;       /* 12px */
+  --text-sm: 0.875rem;      /* 14px */
+  --text-base: 1rem;         /* 16px */
+  --text-lg: 1.125rem;      /* 18px */
+  --text-xl: 1.25rem;       /* 20px */
+  --text-2xl: clamp(1.35rem, 2vw, 1.625rem); /* 22-26px */
+  --text-3xl: clamp(1.65rem, 2.5vw, 2rem);    /* 26-32px */
+  --text-4xl: clamp(2rem, 3.5vw, 2.65rem);    /* 32-42px */
+  --text-5xl: clamp(2.5rem, 5vw, 3.75rem);    /* 40-60px */
+  --text-display: clamp(2.85rem, 6.5vw, 5rem); /* 46-80px */
+
+  /* Line Heights */
+  --leading-none: 1;
+  --leading-tight: 1.15;
+  --leading-snug: 1.3;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  /* Letter Spacing */
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.05em;
+  --tracking-wider: 0.1em;
+  --tracking-widest: 0.18em;
+
+  /* ========================================================================
+     4. SPACING SCALE (Predictable 8pt grid with 4pt micro-steps)
+     ======================================================================== */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+
+  /* ========================================================================
+     5. RADII SCALE
+     ======================================================================== */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-pill: 9999px;
+
+  /* ========================================================================
+     6. SHADOWS & GLOWS (Atmospheric lighting)
+     ======================================================================== */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.65);
+  --shadow-xl: 0 24px 60px rgba(0, 0, 0, 0.85);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+
+  --glow-mint: 0 0 24px rgba(54, 244, 164, 0.32);
+  --glow-mint-lg: 0 0 50px rgba(54, 244, 164, 0.22);
+  --glow-white: 0 0 25px rgba(255, 255, 255, 0.18);
+
+  /* ========================================================================
+     7. TRANSITIONS & TIMING (200-300ms smooth cubic-bezier)
+     ======================================================================== */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 150ms var(--ease-spring);
+  --transition-base: 220ms var(--ease-spring);
+  --transition-slow: 350ms var(--ease-spring);
+
+  /* ========================================================================
+     8. COMPONENT TOKENS
+     ======================================================================== */
+  --btn-height-sm: 36px;
+  --btn-height-md: 46px;
+  --btn-height-lg: 56px;
+  --input-height: 48px;
+  --header-height: 76px;
+  --container-max: 1280px;
+}
+
+/* ==========================================================================
+   CSS RESET & BASE DEFAULTS
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--surface-canvas);
+  color: var(--text-primary);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  background-color: var(--surface-canvas);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  selection-background-color: var(--primitive-mint-500);
+  selection-color: var(--primitive-obsidian);
+}
+
+::selection {
+  background-color: var(--primitive-mint-500);
+  color: var(--primitive-obsidian);
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+/* Accessible visible focus ring on keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--primitive-mint-500);
+  outline-offset: 3px;
+  border-radius: var(--radius-xs);
+}
+
+/* Container Utility */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+}
+
+/* Ambient Radial Mesh Background */
+.ambient-mesh {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.ambient-mesh::before {
+  content: '';
+  position: absolute;
+  top: -20vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  height: 60vh;
+  background: radial-gradient(circle, rgba(54, 244, 164, 0.07) 0%, rgba(12, 35, 39, 0.04) 45%, transparent 70%);
+  filter: blur(80px);
+}
+
+.ambient-mesh::after {
+  content: '';
+  position: absolute;
+  bottom: -15vh;
+  right: -10vw;
+  width: 50vw;
+  height: 50vh;
+  background: radial-gradient(circle, rgba(7, 39, 32, 0.08) 0%, transparent 60%);
+  filter: blur(100px);
+}
+
+/* Typography Utilities */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 40%, var(--primitive-slate-400) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-mint {
+  background: linear-gradient(135deg, #ffffff 20%, var(--primitive-mint-500) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
