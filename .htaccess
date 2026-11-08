@@ -1,19 +1,22 @@
 # ====================================================================
-# TEMPLATE SHOWCASE — REWRITE RULES FOR CLEAN URLS (APACHE)
+# TEMPLATE SHOWCASE — REWRITE RULES FOR CLEAN URLS (/PAGES)
 # ====================================================================
 
 RewriteEngine On
 
-# Si le fichier existe directement, le servir
+# Si le fichier existe directement (assets, etc.), le servir
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# Servir .html si la ressource sans extension existe
-RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-RewriteRule ^([^/]+)/?$ $1.html [L]
+# Rediriger la racine vers pages/index.html
+RewriteRule ^$ pages/index.html [L]
 
-# Sécurité : masquer les fichiers sensibles
+# Servir depuis le dossier pages/ sans afficher .html
+RewriteCond %{DOCUMENT_ROOT}/pages/$1.html -f
+RewriteRule ^([^/]+)/?$ pages/$1.html [L]
+
+# Sécurité : masquer les fichiers cachés
 <FilesMatch "^\.">
   Order allow,deny
   Deny from all

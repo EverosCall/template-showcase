@@ -1,4 +1,10 @@
-# Netlify / Cloudflare Pages : les URLs sans .html fonctionnent automatiquement
-# (Pretty URLs). Seule la redirection des anciennes URLs est nécessaire :
-/index.html   /       301
-/*.html       /:splat 301
+# Netlify & Cloudflare Pages : Réécriture propre vers le dossier /pages
+/              /pages/index.html    200
+/produits      /pages/produits.html 200
+/produit       /pages/produit.html  200
+/about         /pages/about.html    200
+/services      /pages/services.html 200
+/tarifs        /pages/tarifs.html   200
+/faq           /pages/faq.html      200
+/contact       /pages/contact.html  200
+/:page         /pages/:page.html    200

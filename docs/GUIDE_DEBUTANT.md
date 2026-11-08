@@ -118,11 +118,11 @@ Toutes les images du site sont identifiées dans le code HTML par des balises cl
 
 | Image | Fichier où la trouver |
 | :--- | :--- |
-| **Photo principale (Hero)** | `index.html` |
+| **Photo principale (Hero)** | `pages/index.html` |
 | **Photos des produits** | `assets/js/products.js` |
-| **Photo de l'Atelier / Histoire** | `about.html` |
-| **Portraits de l'équipe** | `about.html` |
-| **Photos des avis clients** | `index.html` |
+| **Photo de l'Atelier / Histoire** | `pages/about.html` |
+| **Portraits de l'équipe** | `pages/about.html` |
+| **Photos des avis clients** | `pages/index.html` |
 
 > 💡 **Astuce débutant** : Vous pouvez utiliser un lien web direct (Unsplash, Cloudinary) ou créer un dossier `assets/img/` et écrire `src="assets/img/ma-photo.jpg"`.
 

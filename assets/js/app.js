@@ -628,15 +628,32 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Highlight Active Link
-  const currentPath = window.location.pathname.replace(/\/$/, "").split("/").pop() || "index";
+  const currentPath = window.location.pathname.replace(/\.html$/, "").replace(/\/$/, "").split("/").pop() || "index";
   document.querySelectorAll(".nav-link, .mobile-nav__link").forEach(link => {
     const href = link.getAttribute("href");
     if (!href) return;
     const cleanHref = href.replace(/\.html$/, "").replace(/^\.\//, "");
-    if (cleanHref === currentPath || (currentPath === "index" && (cleanHref === "" || cleanHref === "./"))) {
+    if (cleanHref === currentPath || (currentPath === "index" && (cleanHref === "" || cleanHref === "./" || cleanHref === "index"))) {
       link.classList.add("active");
     }
   });
+
+  // Local file:// protocol compatibility (auto-resolves clean URLs without server)
+  if (window.location.protocol === "file:") {
+    document.querySelectorAll("a[href]").forEach(link => {
+      const href = link.getAttribute("href");
+      if (href && !href.startsWith("http") && !href.startsWith("#") && !href.startsWith("mailto:") && !href.startsWith("tel:") && !href.endsWith(".html")) {
+        if (href === "./" || href === "") {
+          link.setAttribute("href", "index.html");
+        } else if (href.includes("?")) {
+          const [path, query] = href.split("?");
+          link.setAttribute("href", `${path}.html?${query}`);
+        } else {
+          link.setAttribute("href", `${href}.html`);
+        }
+      }
+    });
+  }
 
   // Top Announcement Bar Dismiss
   const announceClose = document.querySelector(".announcement-close");

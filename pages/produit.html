@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Maison & Le Manifeste — ATELIER KRONA</title>
-  <meta name="description" content="Découvrez l'histoire d'Atelier Krona, notre manifeste artisanal, nos engagements environnementaux et les maîtres artisans qui façonnent nos créations.">
+  <title>Détails de la Pièce — ATELIER KRONA</title>
+  <meta name="description" content="Découvrez les caractéristiques techniques, dimensions, finitions et options de commande de cette pièce d'exception.">
 
   <!-- Favicon SVG -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2336f4a4'><circle cx='12' cy='12' r='9'/></svg>">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/theme.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/layout.css">
-  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
 </head>
 <body>
 
   <!-- Announcement Bar -->
-  <aside class="announcement-bar" role="region" aria-label="Manifeste">
-    <span class="badge badge-mint">MANIFESTE</span>
-    <span>Une vision radicale de la durabilité : des pièces réparables à vie sans aucune obsolescence programmée.</span>
+  <aside class="announcement-bar" role="region" aria-label="Canal officiel">
+    <span class="badge badge-mint">GARANTIE ATELIER</span>
+    <span>Chaque pièce est accompagnée de son certificat d'authenticité et d'une garantie structurelle de 5 ans.</span>
     <button type="button" class="announcement-close" aria-label="Fermer l'annonce">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
     </button>
@@ -38,8 +38,8 @@
 
         <ul class="nav-menu">
           <li><a href="./" class="nav-link">Accueil</a></li>
-          <li><a href="produits" class="nav-link">Catalogue</a></li>
-          <li><a href="about" class="nav-link active">La Maison</a></li>
+          <li><a href="produits" class="nav-link active">Catalogue</a></li>
+          <li><a href="about" class="nav-link">La Maison</a></li>
           <li><a href="services" class="nav-link">Sur-Mesure</a></li>
           <li><a href="tarifs" class="nav-link">Formules</a></li>
           <li><a href="faq" class="nav-link">FAQ</a></li>
@@ -80,8 +80,8 @@
 
     <ul class="mobile-nav__links">
       <li><a href="./" class="mobile-nav__link">Accueil</a></li>
-      <li><a href="produits" class="mobile-nav__link">Catalogue</a></li>
-      <li><a href="about" class="mobile-nav__link active">La Maison</a></li>
+      <li><a href="produits" class="mobile-nav__link active">Catalogue</a></li>
+      <li><a href="about" class="mobile-nav__link">La Maison</a></li>
       <li><a href="services" class="mobile-nav__link">Sur-Mesure</a></li>
       <li><a href="tarifs" class="mobile-nav__link">Formules</a></li>
       <li><a href="faq" class="mobile-nav__link">FAQ</a></li>
@@ -96,104 +96,40 @@
     </div>
   </div>
 
-  <main>
-    <!-- Hero Editorial -->
-    <section class="section" style="padding-bottom: var(--space-12);">
-      <div class="container" style="max-width: 900px; text-align: center;">
-        <h1 class="hero-title" style="font-size: clamp(2.4rem, 5vw, 4.2rem);">
-          L'Art de Façonner la Matière <br>
-          <span class="text-mint">& le Temps.</span>
-        </h1>
-        <p class="section-desc" style="font-size: 18px; line-height: 1.7; margin-bottom: 40px;">
-          Née de la rencontre entre le fonctionnalisme scandinave et la haute tradition d'ébénisterie et de métallerie française, Atelier Krona conçoit des pièces qui refusent les cycles éphémères de la consommation.
-        </p>
-      </div>
+  <main class="section">
+    <div class="container">
+      
+      <!-- Breadcrumb Navigation -->
+      <nav aria-label="Fil d'Ariane" style="margin-bottom: var(--space-8); font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+        <a href="./" style="color: var(--text-secondary);">Accueil</a>
+        <span>/</span>
+        <a href="produits" id="breadcrumb-category" style="color: var(--text-secondary);">Catalogue</a>
+        <span>/</span>
+        <span id="breadcrumb-product" style="color: var(--primitive-white); font-weight: 600;">Chargement...</span>
+      </nav>
 
-      <div class="container" style="max-width: 1100px;">
-        <div style="border-radius: var(--radius-2xl); overflow: hidden; aspect-ratio: 21/9; box-shadow: var(--shadow-xl); border: 1px solid var(--border-subtle);">
-          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80" alt="Atelier Krona — Façonnage et usinage" style="width: 100%; height: 100%; object-fit: cover;">
+      <!-- Dynamic Product Detail Container -->
+      <div id="product-detail-view">
+        <div style="text-align: center; padding: 100px 0; color: var(--text-muted);">
+          Chargement des détails de la pièce...
         </div>
       </div>
-    </section>
 
-    <!-- The 4 Pillars / Manifesto -->
-    <section class="section" style="background: rgba(4, 12, 14, 0.5);">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Quatre principes non négociables</h2>
-          <p class="section-desc">
-            Dans un monde submergé d'objets jetables, nous choisissons la lenteur, la densité de la matière et la précision mathématique.
-          </p>
+      <!-- Related Creations Section -->
+      <section style="margin-top: var(--space-24); padding-top: var(--space-16); border-top: 1px solid var(--border-subtle);">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: var(--space-8); flex-wrap: wrap; gap: 12px;">
+          <div>
+            <h2 class="section-title" style="margin-bottom: 0;">Créations assorties</h2>
+          </div>
+          <a href="produits" class="btn btn-outline-mint btn-sm">Explorer toute la collection →</a>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
-          <div class="glass-card">
-            <h3 style="font-size: 20px; font-weight: 700; color: var(--primitive-white); margin-bottom: 8px;">Vérité des Éléments</h3>
-            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
-              Nous n'appliquons aucun plaquage artificiel. Le bois est massif, le laiton est épais et usiné, l'aluminium est découpé dans la masse. Chaque texture est vraie au toucher.
-            </p>
-          </div>
-
-          <div class="glass-card">
-            <h3 style="font-size: 20px; font-weight: 700; color: var(--primitive-white); margin-bottom: 8px;">Réparabilité Éternelle</h3>
-            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
-              Toutes les fixations sont démontables à l'aide d'outils standards. Les modules LED et composants audio sont interchangeables et garantis disponibles pendant 20 ans.
-            </p>
-          </div>
-
-          <div class="glass-card">
-            <h3 style="font-size: 20px; font-weight: 700; color: var(--primitive-white); margin-bottom: 8px;">Ateliers Partenaires en Europe</h3>
-            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
-              De l'usinage en Suède à la tannerie artisanale en Toscane et à l'assemblage final à Paris, notre chaîne de fabrication est 100% européenne et traçable.
-            </p>
-          </div>
-
-          <div class="glass-card">
-            <h3 style="font-size: 20px; font-weight: 700; color: var(--primitive-white); margin-bottom: 8px;">Sobriété des Emballages</h3>
-            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
-              Nos caisses de transport sont en contreplaqué certifié FSC, calées à l'aide de feutre de laine naturelle réutilisable. Aucune mousse plastique polluante.
-            </p>
-          </div>
+        <div class="product-grid" id="related-products-grid">
+          <!-- Rendered by js/product-detail.js -->
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Team & Founders -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Les artisans derrière l'Atelier</h2>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; max-width: 960px; margin: 0 auto;">
-          <div class="glass-card" style="text-align: center;">
-            <div style="width: 140px; height: 140px; border-radius: 50%; overflow: hidden; margin: 0 auto 20px auto; border: 2px solid var(--border-accent);">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Elin Krona" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h3 style="font-size: 20px; font-weight: 700; color: var(--primitive-white); margin-bottom: 4px;">Elin Krona</h3>
-            <div style="font-size: 12px; font-weight: 600; color: var(--color-primary); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px;">Fondatrice & Directrice du Design</div>
-            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
-              Formée à la Royal Danish Academy de Copenhague, Elin insuffle la rigueur architecturale et la pureté des lignes qui caractérisent chaque création de la marque.
-            </p>
-          </div>
-
-          <div class="glass-card" style="text-align: center;">
-            <div style="width: 140px; height: 140px; border-radius: 50%; overflow: hidden; margin: 0 auto 20px auto; border: 2px solid var(--border-accent);">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Julien Delacroix" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h3 style="font-size: 20px; font-weight: 700; color: var(--primitive-white); margin-bottom: 4px;">Julien Delacroix</h3>
-            <div style="font-size: 12px; font-weight: 600; color: var(--color-primary); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px;">Maître Métallier & Ingénieur R&D</div>
-            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
-              Ingénieur en métallurgie de précision et compagnon du devoir, Julien orchestre les procédés d'usinage micrométrique et les finitions anodisées dans nos ateliers.
-            </p>
-          </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 50px;">
-          <a href="contact" class="btn btn-primary btn-lg">Prendre rendez-vous au showroom</a>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
 
   <!-- Full Footer -->
@@ -295,8 +231,9 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/config.js"></script>
-  <script src="assets/js/products.js"></script>
-  <script src="assets/js/app.js"></script>
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/products.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/product-detail.js"></script>
 </body>
 </html>

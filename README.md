@@ -123,6 +123,16 @@ template-showcase/
 ├── docs/                      # Documentation claire et isolée
 │   └── GUIDE_DEBUTANT.md      # Guide pratique pas-à-pas pour les débutants
 │
+├── pages/                     # Toutes les pages HTML regroupées
+│   ├── index.html             # Accueil (Hero, Spotlight, Bento collections, Avis)
+│   ├── produits.html          # Catalogue dynamique avec filtres & recherche
+│   ├── produit.html           # Fiche produit détaillée avec galerie & sélecteur
+│   ├── about.html             # Histoire, manifeste & valeurs d'atelier
+│   ├── services.html          # Sur-Mesure, prescription B2B & processus de fabrication
+│   ├── tarifs.html            # Ensembles harmonisés & packs remisés
+│   ├── faq.html               # Foire aux questions interactive
+│   └── contact.html           # Showroom, formulaire validé & copie d'adresse 1-clic
+│
 ├── assets/                    # Ressources statiques regroupées
 │   ├── css/
 │   │   ├── theme.css          # Tokens 3-tier, typographie, couleurs & reset
@@ -139,15 +149,7 @@ template-showcase/
 │       ├── faq.js             # Recherche et accordéons FAQ
 │       └── contact.js         # Validation en direct et webhook email
 │
-├── index.html                 # Page d'accueil (Hero, Spotlight, Bento collections, Avis)
-├── produits.html              # Catalogue dynamique avec filtres & recherche
-├── produit.html               # Fiche produit détaillée avec galerie & sélecteur
-├── about.html                 # Histoire, manifeste & valeurs d'atelier
-├── services.html              # Sur-Mesure, prescription B2B & processus de fabrication
-├── tarifs.html                # Ensembles harmonisés & packs remisés
-├── faq.html                   # Foire aux questions interactive
-├── contact.html               # Showroom, formulaire validé & copie d'adresse 1-clic
-│
+├── index.html                 # Point d'entrée racine avec redirection automatique
 ├── package.json               # Configuration projet & scripts légers
 ├── vercel.json                # Configuration URLs propres Vercel
 ├── serve.json                 # Configuration serveur local

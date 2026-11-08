@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Détails de la Pièce — ATELIER KRONA</title>
-  <meta name="description" content="Découvrez les caractéristiques techniques, dimensions, finitions et options de commande de cette pièce d'exception.">
+  <title>Showroom & Contact Atelier — ATELIER KRONA</title>
+  <meta name="description" content="Prenez contact avec l'Atelier Krona pour une commande sur-mesure, une demande d'échantillons ou un rendez-vous privé à notre showroom parisien.">
 
   <!-- Favicon SVG -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2336f4a4'><circle cx='12' cy='12' r='9'/></svg>">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/theme.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/layout.css">
-  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
 </head>
 <body>
 
   <!-- Announcement Bar -->
-  <aside class="announcement-bar" role="region" aria-label="Canal officiel">
-    <span class="badge badge-mint">GARANTIE ATELIER</span>
-    <span>Chaque pièce est accompagnée de son certificat d'authenticité et d'une garantie structurelle de 5 ans.</span>
+  <aside class="announcement-bar" role="region" aria-label="Service client">
+    <span class="badge badge-mint">SHOWROOM</span>
+    <span>Notre atelier parisien vous accueille du lundi au samedi sur rendez-vous pour découvrir les pièces.</span>
     <button type="button" class="announcement-close" aria-label="Fermer l'annonce">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
     </button>
@@ -38,12 +38,12 @@
 
         <ul class="nav-menu">
           <li><a href="./" class="nav-link">Accueil</a></li>
-          <li><a href="produits" class="nav-link active">Catalogue</a></li>
+          <li><a href="produits" class="nav-link">Catalogue</a></li>
           <li><a href="about" class="nav-link">La Maison</a></li>
           <li><a href="services" class="nav-link">Sur-Mesure</a></li>
           <li><a href="tarifs" class="nav-link">Formules</a></li>
           <li><a href="faq" class="nav-link">FAQ</a></li>
-          <li><a href="contact" class="nav-link">Showroom</a></li>
+          <li><a href="contact" class="nav-link active">Showroom</a></li>
         </ul>
 
         <div class="nav-actions">
@@ -80,12 +80,12 @@
 
     <ul class="mobile-nav__links">
       <li><a href="./" class="mobile-nav__link">Accueil</a></li>
-      <li><a href="produits" class="mobile-nav__link active">Catalogue</a></li>
+      <li><a href="produits" class="mobile-nav__link">Catalogue</a></li>
       <li><a href="about" class="mobile-nav__link">La Maison</a></li>
       <li><a href="services" class="mobile-nav__link">Sur-Mesure</a></li>
       <li><a href="tarifs" class="mobile-nav__link">Formules</a></li>
       <li><a href="faq" class="mobile-nav__link">FAQ</a></li>
-      <li><a href="contact" class="mobile-nav__link">Showroom & Contact</a></li>
+      <li><a href="contact" class="mobile-nav__link active">Showroom & Contact</a></li>
     </ul>
 
     <div class="mobile-nav__footer">
@@ -99,35 +99,109 @@
   <main class="section">
     <div class="container">
       
-      <!-- Breadcrumb Navigation -->
-      <nav aria-label="Fil d'Ariane" style="margin-bottom: var(--space-8); font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
-        <a href="./" style="color: var(--text-secondary);">Accueil</a>
-        <span>/</span>
-        <a href="produits" id="breadcrumb-category" style="color: var(--text-secondary);">Catalogue</a>
-        <span>/</span>
-        <span id="breadcrumb-product" style="color: var(--primitive-white); font-weight: 600;">Chargement...</span>
-      </nav>
-
-      <!-- Dynamic Product Detail Container -->
-      <div id="product-detail-view">
-        <div style="text-align: center; padding: 100px 0; color: var(--text-muted);">
-          Chargement des détails de la pièce...
-        </div>
+      <div class="section-header">
+        <h1 class="section-title">Prendre Contact avec l'Atelier</h1>
+        <p class="section-desc">
+          Une interrogation sur une pièce, un projet sur-mesure ou une demande de visite privée à notre showroom parisien ? Notre équipe vous répond sous 24h ouvrées.
+        </p>
       </div>
 
-      <!-- Related Creations Section -->
-      <section style="margin-top: var(--space-24); padding-top: var(--space-16); border-top: 1px solid var(--border-subtle);">
-        <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: var(--space-8); flex-wrap: wrap; gap: 12px;">
-          <div>
-            <h2 class="section-title" style="margin-bottom: 0;">Créations assorties</h2>
+      <!-- Split Layout (Form & Showroom Info) -->
+      <div style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: start;">
+        
+        <!-- Form Column -->
+        <div class="glass-card">
+          <h2 style="font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--primitive-white); margin-bottom: 24px;">
+            Envoyer un message à l'atelier
+          </h2>
+
+          <div id="contact-success-alert" style="display: none; background: rgba(54, 244, 164, 0.12); border: 1px solid var(--border-accent); border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 24px; color: var(--color-primary); font-size: 14px;">
+            ✨ <strong>Message transmis avec succès !</strong> Notre atelier a bien reçu votre demande et vous répondra sous 24 à 48 heures ouvrées.
           </div>
-          <a href="produits" class="btn btn-outline-mint btn-sm">Explorer toute la collection →</a>
+
+          <form id="contact-form">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Nom complet *</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="ex: Jean Dupont" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email officiel *</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="ex: jean@domaine.fr" required>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Objet de la demande</label>
+                <input type="text" id="contact-subject" class="form-input" placeholder="ex: Renseignement sur une pièce, devis...">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-product">Pièce concernée (optionnel)</label>
+                <select id="contact-product" class="form-select">
+                  <option value="">Sélectionner une création...</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Votre message *</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="Décrivez votre projet, vos interrogations ou les finitions envisagées..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full btn-lg" style="margin-top: 12px;">
+              Transmettre à l'Atelier
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
         </div>
 
-        <div class="product-grid" id="related-products-grid">
-          <!-- Rendered by js/product-detail.js -->
+        <!-- Showroom & Direct Contact -->
+        <div style="display: flex; flex-direction: column; gap: 24px;">
+          <!-- Card Showroom -->
+          <div class="glass-card">
+            <h2 style="font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--primitive-white); margin-bottom: 8px;">
+              Le Showroom Parisien (Visites Privées)
+            </h2>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">
+              Venez manipuler les échantillons de matière, tester les variateurs sensitifs et apprécier le confort de nos assises dans une ambiance feutrée et confidentielle.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 14px; font-size: 14px; color: var(--text-primary); margin-bottom: 24px;">
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--color-primary); flex-shrink: 0; margin-top: 2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <div>
+                  <strong>18 Rue des Métiers d'Art</strong><br>
+                  <span style="color: var(--text-secondary);">75011 Paris, France</span>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--color-primary); flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>Lundi au Vendredi : 09h30 — 18h30 (Sur rendez-vous)</span>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--color-primary); flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>+33 (0)1 84 72 90 15</span>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-outline-mint btn-sm" data-copy-address>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              Copier l'adresse du Showroom
+            </button>
+          </div>
+
+          <!-- Photo Showroom -->
+          <div style="border-radius: var(--radius-xl); overflow: hidden; aspect-ratio: 16/9; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg);">
+            <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=800&q=80" alt="Showroom Atelier Krona Paris" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
         </div>
-      </section>
+
+      </div>
 
     </div>
   </main>
@@ -231,9 +305,9 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/config.js"></script>
-  <script src="assets/js/products.js"></script>
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/product-detail.js"></script>
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/products.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/contact.js"></script>
 </body>
 </html>

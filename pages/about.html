@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Showroom & Contact Atelier — ATELIER KRONA</title>
-  <meta name="description" content="Prenez contact avec l'Atelier Krona pour une commande sur-mesure, une demande d'échantillons ou un rendez-vous privé à notre showroom parisien.">
+  <title>La Maison & Le Manifeste — ATELIER KRONA</title>
+  <meta name="description" content="Découvrez l'histoire d'Atelier Krona, notre manifeste artisanal, nos engagements environnementaux et les maîtres artisans qui façonnent nos créations.">
 
   <!-- Favicon SVG -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2336f4a4'><circle cx='12' cy='12' r='9'/></svg>">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/theme.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/layout.css">
-  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
 </head>
 <body>
 
   <!-- Announcement Bar -->
-  <aside class="announcement-bar" role="region" aria-label="Service client">
-    <span class="badge badge-mint">SHOWROOM</span>
-    <span>Notre atelier parisien vous accueille du lundi au samedi sur rendez-vous pour découvrir les pièces.</span>
+  <aside class="announcement-bar" role="region" aria-label="Manifeste">
+    <span class="badge badge-mint">MANIFESTE</span>
+    <span>Une vision radicale de la durabilité : des pièces réparables à vie sans aucune obsolescence programmée.</span>
     <button type="button" class="announcement-close" aria-label="Fermer l'annonce">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
     </button>
@@ -39,11 +39,11 @@
         <ul class="nav-menu">
           <li><a href="./" class="nav-link">Accueil</a></li>
           <li><a href="produits" class="nav-link">Catalogue</a></li>
-          <li><a href="about" class="nav-link">La Maison</a></li>
+          <li><a href="about" class="nav-link active">La Maison</a></li>
           <li><a href="services" class="nav-link">Sur-Mesure</a></li>
           <li><a href="tarifs" class="nav-link">Formules</a></li>
           <li><a href="faq" class="nav-link">FAQ</a></li>
-          <li><a href="contact" class="nav-link active">Showroom</a></li>
+          <li><a href="contact" class="nav-link">Showroom</a></li>
         </ul>
 
         <div class="nav-actions">
@@ -81,11 +81,11 @@
     <ul class="mobile-nav__links">
       <li><a href="./" class="mobile-nav__link">Accueil</a></li>
       <li><a href="produits" class="mobile-nav__link">Catalogue</a></li>
-      <li><a href="about" class="mobile-nav__link">La Maison</a></li>
+      <li><a href="about" class="mobile-nav__link active">La Maison</a></li>
       <li><a href="services" class="mobile-nav__link">Sur-Mesure</a></li>
       <li><a href="tarifs" class="mobile-nav__link">Formules</a></li>
       <li><a href="faq" class="mobile-nav__link">FAQ</a></li>
-      <li><a href="contact" class="mobile-nav__link active">Showroom & Contact</a></li>
+      <li><a href="contact" class="mobile-nav__link">Showroom & Contact</a></li>
     </ul>
 
     <div class="mobile-nav__footer">
@@ -96,114 +96,104 @@
     </div>
   </div>
 
-  <main class="section">
-    <div class="container">
-      
-      <div class="section-header">
-        <h1 class="section-title">Prendre Contact avec l'Atelier</h1>
-        <p class="section-desc">
-          Une interrogation sur une pièce, un projet sur-mesure ou une demande de visite privée à notre showroom parisien ? Notre équipe vous répond sous 24h ouvrées.
+  <main>
+    <!-- Hero Editorial -->
+    <section class="section" style="padding-bottom: var(--space-12);">
+      <div class="container" style="max-width: 900px; text-align: center;">
+        <h1 class="hero-title" style="font-size: clamp(2.4rem, 5vw, 4.2rem);">
+          L'Art de Façonner la Matière <br>
+          <span class="text-mint">& le Temps.</span>
+        </h1>
+        <p class="section-desc" style="font-size: 18px; line-height: 1.7; margin-bottom: 40px;">
+          Née de la rencontre entre le fonctionnalisme scandinave et la haute tradition d'ébénisterie et de métallerie française, Atelier Krona conçoit des pièces qui refusent les cycles éphémères de la consommation.
         </p>
       </div>
 
-      <!-- Split Layout (Form & Showroom Info) -->
-      <div style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: start;">
-        
-        <!-- Form Column -->
-        <div class="glass-card">
-          <h2 style="font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--primitive-white); margin-bottom: 24px;">
-            Envoyer un message à l'atelier
-          </h2>
-
-          <div id="contact-success-alert" style="display: none; background: rgba(54, 244, 164, 0.12); border: 1px solid var(--border-accent); border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 24px; color: var(--color-primary); font-size: 14px;">
-            ✨ <strong>Message transmis avec succès !</strong> Notre atelier a bien reçu votre demande et vous répondra sous 24 à 48 heures ouvrées.
-          </div>
-
-          <form id="contact-form">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-              <div class="form-group">
-                <label class="form-label" for="contact-name">Nom complet *</label>
-                <input type="text" id="contact-name" class="form-input" placeholder="ex: Jean Dupont" required>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="contact-email">Email officiel *</label>
-                <input type="email" id="contact-email" class="form-input" placeholder="ex: jean@domaine.fr" required>
-              </div>
-            </div>
-
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-              <div class="form-group">
-                <label class="form-label" for="contact-subject">Objet de la demande</label>
-                <input type="text" id="contact-subject" class="form-input" placeholder="ex: Renseignement sur une pièce, devis...">
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="contact-product">Pièce concernée (optionnel)</label>
-                <select id="contact-product" class="form-select">
-                  <option value="">Sélectionner une création...</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="contact-message">Votre message *</label>
-              <textarea id="contact-message" class="form-textarea" placeholder="Décrivez votre projet, vos interrogations ou les finitions envisagées..." required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-full btn-lg" style="margin-top: 12px;">
-              Transmettre à l'Atelier
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-            </button>
-          </form>
+      <div class="container" style="max-width: 1100px;">
+        <div style="border-radius: var(--radius-2xl); overflow: hidden; aspect-ratio: 21/9; box-shadow: var(--shadow-xl); border: 1px solid var(--border-subtle);">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80" alt="Atelier Krona — Façonnage et usinage" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
-
-        <!-- Showroom & Direct Contact -->
-        <div style="display: flex; flex-direction: column; gap: 24px;">
-          <!-- Card Showroom -->
-          <div class="glass-card">
-            <h2 style="font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--primitive-white); margin-bottom: 8px;">
-              Le Showroom Parisien (Visites Privées)
-            </h2>
-            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">
-              Venez manipuler les échantillons de matière, tester les variateurs sensitifs et apprécier le confort de nos assises dans une ambiance feutrée et confidentielle.
-            </p>
-
-            <div style="display: flex; flex-direction: column; gap: 14px; font-size: 14px; color: var(--text-primary); margin-bottom: 24px;">
-              <div style="display: flex; align-items: flex-start; gap: 12px;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--color-primary); flex-shrink: 0; margin-top: 2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <div>
-                  <strong>18 Rue des Métiers d'Art</strong><br>
-                  <span style="color: var(--text-secondary);">75011 Paris, France</span>
-                </div>
-              </div>
-
-              <div style="display: flex; align-items: center; gap: 12px;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--color-primary); flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                <span>Lundi au Vendredi : 09h30 — 18h30 (Sur rendez-vous)</span>
-              </div>
-
-              <div style="display: flex; align-items: center; gap: 12px;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--color-primary); flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                <span>+33 (0)1 84 72 90 15</span>
-              </div>
-            </div>
-
-            <button type="button" class="btn btn-outline-mint btn-sm" data-copy-address>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              Copier l'adresse du Showroom
-            </button>
-          </div>
-
-          <!-- Photo Showroom -->
-          <div style="border-radius: var(--radius-xl); overflow: hidden; aspect-ratio: 16/9; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg);">
-            <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=800&q=80" alt="Showroom Atelier Krona Paris" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
-        </div>
-
       </div>
+    </section>
 
-    </div>
+    <!-- The 4 Pillars / Manifesto -->
+    <section class="section" style="background: rgba(4, 12, 14, 0.5);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Quatre principes non négociables</h2>
+          <p class="section-desc">
+            Dans un monde submergé d'objets jetables, nous choisissons la lenteur, la densité de la matière et la précision mathématique.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+          <div class="glass-card">
+            <h3 style="font-size: 20px; font-weight: 700; color: var(--primitive-white); margin-bottom: 8px;">Vérité des Éléments</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+              Nous n'appliquons aucun plaquage artificiel. Le bois est massif, le laiton est épais et usiné, l'aluminium est découpé dans la masse. Chaque texture est vraie au toucher.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <h3 style="font-size: 20px; font-weight: 700; color: var(--primitive-white); margin-bottom: 8px;">Réparabilité Éternelle</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+              Toutes les fixations sont démontables à l'aide d'outils standards. Les modules LED et composants audio sont interchangeables et garantis disponibles pendant 20 ans.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <h3 style="font-size: 20px; font-weight: 700; color: var(--primitive-white); margin-bottom: 8px;">Ateliers Partenaires en Europe</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+              De l'usinage en Suède à la tannerie artisanale en Toscane et à l'assemblage final à Paris, notre chaîne de fabrication est 100% européenne et traçable.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <h3 style="font-size: 20px; font-weight: 700; color: var(--primitive-white); margin-bottom: 8px;">Sobriété des Emballages</h3>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+              Nos caisses de transport sont en contreplaqué certifié FSC, calées à l'aide de feutre de laine naturelle réutilisable. Aucune mousse plastique polluante.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team & Founders -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Les artisans derrière l'Atelier</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; max-width: 960px; margin: 0 auto;">
+          <div class="glass-card" style="text-align: center;">
+            <div style="width: 140px; height: 140px; border-radius: 50%; overflow: hidden; margin: 0 auto 20px auto; border: 2px solid var(--border-accent);">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Elin Krona" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h3 style="font-size: 20px; font-weight: 700; color: var(--primitive-white); margin-bottom: 4px;">Elin Krona</h3>
+            <div style="font-size: 12px; font-weight: 600; color: var(--color-primary); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px;">Fondatrice & Directrice du Design</div>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+              Formée à la Royal Danish Academy de Copenhague, Elin insuffle la rigueur architecturale et la pureté des lignes qui caractérisent chaque création de la marque.
+            </p>
+          </div>
+
+          <div class="glass-card" style="text-align: center;">
+            <div style="width: 140px; height: 140px; border-radius: 50%; overflow: hidden; margin: 0 auto 20px auto; border: 2px solid var(--border-accent);">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Julien Delacroix" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h3 style="font-size: 20px; font-weight: 700; color: var(--primitive-white); margin-bottom: 4px;">Julien Delacroix</h3>
+            <div style="font-size: 12px; font-weight: 600; color: var(--color-primary); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px;">Maître Métallier & Ingénieur R&D</div>
+            <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+              Ingénieur en métallurgie de précision et compagnon du devoir, Julien orchestre les procédés d'usinage micrométrique et les finitions anodisées dans nos ateliers.
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+          <a href="contact" class="btn btn-primary btn-lg">Prendre rendez-vous au showroom</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Full Footer -->
@@ -305,9 +295,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/config.js"></script>
-  <script src="assets/js/products.js"></script>
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/contact.js"></script>
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/products.js"></script>
+  <script src="../assets/js/app.js"></script>
 </body>
 </html>
