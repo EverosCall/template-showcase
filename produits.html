@@ -17,9 +17,6 @@
 </head>
 <body>
 
-  <!-- Ambient Mesh Background -->
-  <div class="ambient-mesh" aria-hidden="true"></div>
-
   <!-- Top Announcement Bar -->
   <aside class="announcement-bar" role="region" aria-label="Disponibilité officielle">
     <span class="badge badge-mint">EXPÉDITION</span>
@@ -104,24 +101,21 @@
       
       <!-- Catalog Header -->
       <div class="section-header" style="margin-bottom: var(--space-8);">
-        <span class="section-kicker">Édition 2026</span>
         <h1 class="section-title">Catalogue des Pièces Façonnées</h1>
         <p class="section-desc">
           Luminaires de table, assises sculpturales, tables en pierre et systèmes audio de précision. Toutes nos créations sont accompagnées de leur certificat d'authenticité numéroté.
         </p>
       </div>
 
-      <!-- Controls Panel (Search, Filter Pills, Sorting) -->
+      <!-- Controls Panel -->
       <div class="catalog-controls">
         <div class="catalog-search-row">
-          <!-- Search input -->
           <div class="search-input-wrap">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             <input type="text" id="catalog-search" class="form-input" placeholder="Rechercher une pièce, un matériau (ex: laiton, lampe, cuir)... Appuyez sur '/'">
             <button type="button" id="search-clear-btn" class="search-clear-btn" style="display: none;" aria-label="Effacer la recherche">✕</button>
           </div>
 
-          <!-- Sort Select -->
           <div style="min-width: 200px;">
             <select id="catalog-sort" class="form-select" aria-label="Trier par">
               <option value="featured">Pièces en vedette</option>
@@ -132,27 +126,27 @@
           </div>
         </div>
 
-        <!-- Category Pills & Count -->
         <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
           <div class="category-pills-row" id="category-filters">
             <!-- Dynamic Category Pills inserted by catalog.js -->
           </div>
 
-          <div style="font-size: 13px; color: var(--text-muted); font-family: var(--font-mono);" id="catalog-count">
+          <div style="font-size: 12px; color: var(--text-muted);" id="catalog-count">
             Chargement des pièces...
           </div>
         </div>
       </div>
 
-      <!-- Empty State Container -->
+      <!-- Empty State -->
       <div id="catalog-empty" class="glass-card" style="display: none; text-align: center; padding: 60px 20px; max-width: 600px; margin: 40px auto;">
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto 16px auto; color: var(--text-muted);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 8px;">Aucune création ne correspond</h3>
+        <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 8px;">Aucune création ne correspond</h2>
         <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 24px;">Essayez d'autres mots-clés ou réinitialisez vos filtres pour voir toute la collection.</p>
         <button type="button" id="reset-filters-btn" class="btn btn-outline-mint btn-sm">Réinitialiser les filtres</button>
       </div>
 
       <!-- Product Cards Grid -->
+      <h2 class="sr-only">Pièces de la collection</h2>
       <div class="product-grid" id="catalog-grid">
         <!-- Rendered dynamically by js/catalog.js -->
       </div>
@@ -167,28 +161,28 @@
         <div class="trust-badge-item">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           <div>
-            <h5>Garantie 5 Ans</h5>
+            <h3>Garantie 5 Ans</h3>
             <p>Structure & finitions couvertes</p>
           </div>
         </div>
         <div class="trust-badge-item">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
           <div>
-            <h5>Livraison Blanche</h5>
+            <h3>Livraison Blanche</h3>
             <p>Expédition renforcée avec suivi</p>
           </div>
         </div>
         <div class="trust-badge-item">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
           <div>
-            <h5>Retour 30 Jours</h5>
+            <h3>Retour 30 Jours</h3>
             <p>Sérénité & essai sans engagement</p>
           </div>
         </div>
         <div class="trust-badge-item">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           <div>
-            <h5>Showroom Paris</h5>
+            <h3>Showroom Paris</h3>
             <p>18 Rue des Métiers d'Art, 75011</p>
           </div>
         </div>
@@ -249,7 +243,7 @@
 
       <div class="footer-bottom">
         <div>
-          © 2021—2026 Atelier Krona S.A.S. Tous droits réservés. Façonné avec passion en Europe.
+          © 2021—2026 Atelier Krona S.A.S. Tous droits réservés.
         </div>
         <div class="footer-payment-icons">
           <span>APPLE PAY</span> • <span>VISA</span> • <span>MASTERCARD</span> • <span>KLARNA</span> • <span>AMEX</span>
